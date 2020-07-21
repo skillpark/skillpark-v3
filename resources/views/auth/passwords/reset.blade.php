@@ -1,70 +1,73 @@
 @extends('layouts.security')
 
-
 @section('content')
-<!-- Page Content
-================================================== -->
-<div class="container">
-    <div class="row" style="margin-top: 40px;margin-bottom:30px;">
-        <div class="col-xl-4 offset-xl-4">
+<script>
+    document.title = 'Reset Passowrd | SKILLPARK - Hire Expert Freelancers Any Time';
+</script>
 
-            <div class="login-register-page">
-                <!-- Welcome Text -->
-                <div class="welcome-text">
-                    <h3>Reset Password</h3>
+<!-- Login -->
+<main class="browse-section" style="padding: 0;">
+    <div class="container">
+        <div class="row justify-content-center d-flex vh-100">
+            <div class="col-lg-4 mx-auto">
+                <div class="osahan-login py-4" style="font-size: 13px !important;">
+                    <div class="text-center mb-4">
+                        <a href="{{ url('/') }}"><img src="images/fav-miver.svg" style="width: 50px;" alt=""></a>
+                        <h5 class="font-weight-bold mt-3">Choose New Password</h5>
+                        <p class="text-muted" style="font-size: 12px;">Password must be at least 8 characters long. Include uppercase, lowercase and numbers.</p>
+                    </div>
+
+                    <form method="POST" action="{{ route('password.update') }}">
+                        @csrf
+                        <input type="hidden" name="token" value="{{ $token }}">
+
+                        <div class="form-group">
+                            <label class="mb-1">Email Address</label>
+                            <div class="position-relative icon-form-control">
+                                <i class="fas fa-user position-absolute"></i>
+                                <input type="email" style="pointer-events:none;background-color:aliceblue" name="email" value="{{ $email ?? old('email') }}" class="form-control" >
+                                @error('email')
+                                <span class="feedback" style="color:red;" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="mb-1">Password</label>
+                            <div class="position-relative icon-form-control">
+                                <i class="fas fa-key position-absolute"></i>
+                                <input type="password" name="password" id="password" class="form-control" />
+                                @error('password')
+                                <span class="feedback" style="color:red;" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="mb-1">Password</label>
+                            <div class="position-relative icon-form-control">
+                                <i class="fas fa-key position-absolute"></i>
+                                <input type="password" name="password_confirmation" id="password" class="form-control" />
+                                @error('password')
+                                <span class="feedback" style="color:red;" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="custom-control custom-checkbox mb-3">
+                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                            <label class="custom-control-label" for="customCheck1">Remember password</label>
+                        </div>
+                        <button class="btn btn-success btn-block text-uppercase" type="submit"> Reset Password </button>
+                    </form>
                 </div>
-
-                <!-- Form -->
-                <form method="POST" action="{{ route('password.update') }}">
-                    @csrf
-
-
-                    <input type="hidden" name="token" value="{{ $token }}">
-
-                    @error('email')
-                    <span class="invalid-feedback" style="color:red;" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                    @enderror
-                    <div class="input-with-icon-left">
-                        <i class="icon-material-baseline-mail-outline"></i>
-                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ $email ?? old('email') }}" required autocomplete="email" autofocus>
-                    </div>
-
-                    @error('password')
-                    <span class="invalid-feedback" style="color:red;" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                    @enderror
-                    <div class="input-with-icon-left">
-                        <i class="icon-material-baseline-mail-outline"></i>
-                        <input id="password" type="password" placeholder="Password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-                    </div>
-
-                    @error('password')
-                    <span class="invalid-feedback" style="color:red;" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                    @enderror
-                    <div class="input-with-icon-left">
-                        <i class="icon-material-baseline-mail-outline"></i>
-                        <input id="password-confirm" type="password" placeholder="Confirm Password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                    </div>
             </div>
-
-            <button class="button full-width button-sliding-icon ripple-effect margin-top-10" type="submit">{{ __('Reset Password') }}<i class="icon-material-outline-arrow-right-alt"></i></button>
-
-            </form>
         </div>
-
     </div>
-</div>
-</div>
-
-
-<!-- Spacer -->
-<div class="margin-top-70"></div>
-<!-- Spacer / End-->
-
+</main>
+<!-- End Login -->
 
 @endsection

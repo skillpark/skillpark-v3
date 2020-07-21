@@ -1,76 +1,20 @@
-<!doctype html>
-<html lang="en">
+@extends('layouts.master')
 
-<head>
-
-    <!-- Basic Page Needs
-================================================== -->
-    <title>SkillPark</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-    <!-- CSS
-================================================== -->
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/color.css">
-
-</head>
-
-<body>
-
-    <!-- Wrapper -->
-    <div id="wrapper">
-
-
-        <!-- Page Content
-================================================== -->
-        <!-- Container -->
-        <div class="container">
-
-            <div class="row">
-                <div class="col-xl-12">
-
-                    <section id="not-found" class="center margin-top-0 margin-bottom-0  ">
-                        <h2>404 <i class="icon-line-awesome-question-circle"></i></h2>
-                        <p>We're sorry, but the page you were looking for doesn't exist</p>
-                    </section>
-                    <div class="row">
-                        <div class="col-xl-8 offset-xl-2">
-                            <div class="intro-banner-search-form not-found-search margin-bottom-50"
-                                style="width: 700px;">
-                                <!-- Search Field -->
-                                <div class="intro-search-field ">
-                                    <input id="intro-keywords" type="text" placeholder="What Can We Help You With?">
-                                </div>
-
-                                <!-- Button -->
-                                <div class="intro-search-button">
-                                    <button class="button ripple-effect">Search</button>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <section id="not-found" class="center margin-top-0 margin-bottom-0">
-                        <p>Return to <a href="{{ url('/')}}">Homepage</a><br><span style="font-size: 14px;">&copy;
-                                SKILLPARK</span></p>
-                    </section>
-
+@section('content')
+<!-- 404 Page -->
+<section class="py-5 bg-white border-top border-bottom">
+    <div class="container">
+        <div class="row py-lg-5">
+            <div class="col-lg-8 col-md-8 mx-auto text-center">
+                <h1><img class="img-fluid" src="/images/404.png" alt="404" width="400"></h1>
+                <h1>Sorry! Page not found.</h1>
+                <p class="land">Unfortunately the page you are looking for has been moved or deleted.</p>
+                <div class="mt-5">
+                    <a href="{{ url('/') }}" class="btn btn-success"><i class="mdi mdi-home"></i> GO TO HOME PAGE</a>
                 </div>
             </div>
-
         </div>
-        <!-- Container / End -->
-
-
-        <!-- Spacer -->
-        <div class="margin-top-70"></div>
-        <!-- Spacer / End-->
-
     </div>
-    <!-- Wrapper / End -->
-
-</body>
-
-</html>
+</section>
+<!-- End 404 Page -->
+@endsection

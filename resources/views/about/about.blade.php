@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.master')
 
 @section('content')
 
@@ -10,5 +10,4 @@
 
 
 
-<div class="margin-top-70"></div>
 @endsection

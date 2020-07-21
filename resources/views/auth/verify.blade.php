@@ -1,4 +1,4 @@
-@extends('layouts.security')
+@extends('layouts.master')
 
 
 @section('content')

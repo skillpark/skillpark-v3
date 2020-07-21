@@ -1,95 +1,211 @@
-<!Doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>{{config('app.name','SKILLPARK')}}</title>
-    <link rel="icon" type="image/png" href="/images/titlelogo.png">
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=9">
+    <meta name="description" content="Gambolthemes">
+    <meta name="author" content="Gambolthemes">
+    <title>Skillpark Inc. - Hire Expert Freelancers Any Time</title>
 
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/color.css">
-    <link rel="stylesheet" href="/css/bootstrap-social.css">
+    <!-- Favicon Icon -->
+    <link rel="icon" type="image/png" href="/images/fav-miver.svg">
 
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="/vendor/semantic/semantic.min.css">
+    <link href="/css/responsive.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="/vendor/OwlCarousel/assets/owl.carousel.css" rel="stylesheet">
+    <link href="/vendor/OwlCarousel/assets/owl.theme.default.min.css" rel="stylesheet">
+    <style>
+        .fas,
+        .fa {
+            padding: 3%;
+        }
+
+        .fab {
+            font-size: 14px;
+        }
+
+        .btn-block {
+            font-size: 13px !important;
+            padding: 10px;
+        }
+
+        .btn-block:hover {
+            opacity: 0.9;
+        }
+
+        .col-6 {
+            padding: 5px 5px 0 5px !important;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        a:hover {
+            color: #1dc8cc
+        }
+
+        .form-control {
+            font-size: 13px;
+        }
+
+        li {
+            border: none !important;
+        }
+
+        .btn-outline-google {
+            border-color: #ea4335;
+            background-color: #ea4335;
+            color: #fff !important;
+        }
+
+        .btn-outline-twitter {
+            border-color: #1da1f2;
+            background-color: #1da1f2;
+            color: #fff !important;
+        }
+
+        .btn-outline-github {
+            border-color: #24292e;
+            background-color: #24292e;
+            color: #fff !important;
+        }
+
+        .btn-outline-facebook {
+            border-color: #0d8df1;
+            background-color: #0d8df1;
+            color: #fff !important;
+        }
+        footer{
+            margin-top:50px
+        }
+    </style>
+    <header>
+        <div class="top-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="top-header-full">
+                            <div class="top-left-hd">
+                                <ul>
+                                    <li>
+                                        <div class="wlcm-text"><a href="{{ url('/') }}" style="color:inherit">Welcome to Skillpark Inc.</a></div>
+                                    </li>
+                                    <li>
+                                        <div class="lang-icon dropdown">
+                                            <i class="fas fa-globe ln-glb" style="padding: 0;"></i>
+                                            <a href="#" class="icon15 dropdown-toggle-no-caret" role="button" data-toggle="dropdown">
+                                                EN <i class="fas fa-caret-down p-crt" style="padding: 0;"></i>
+                                            </a>
+                                            <div class="dropdown-menu lanuage-dropdown dropdown-menu-left">
+                                                <a class="link-item" href="#">EN</a>
+                                                <a class="link-item" href="#">नेपाली</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="top-right-hd">
+                                <ul>
+                                    <li>
+                                        <div class="account order-1 dropdown">
+                                            @guest
+                                            <a href="#" class="account-link dropdown-toggle-no-caret" role="button" data-toggle="dropdown">
+                                                <span style="color:#847577;font-size:12px">Learn More</span>
+                                                <i style="color:#847577;font-size:12px" class="fas fa-sort-down"></i>
+                                            </a>
+                                            <div class="dropdown-menu account-dropdown dropdown-menu-right">
+                                                <a class="link-item" href="{{ url('terms') }}">Terms and
+                                                    Condition</a>
+                                                <a class="link-item" href="{{ url('privacy') }}">Privacy
+                                                    Policy</a>
+                                                <a class="link-item" href="{{ url('creators') }}">Creators /
+                                                    Founders</a>
+                                            </div>
+                                            @else
+                                            <a href="#" class="account-link dropdown-toggle-no-caret" role="button" data-toggle="dropdown">
+                                                <div class="user-dp"><img src="{{ Auth::user()->avatar }}" alt="{{ Auth::user()->name }}"></div>
+                                                <span>Hi! {{ Auth::user()->name }}</span>
+                                                <i class="fas fa-sort-down"></i>
+                                            </a>
+                                            <div class="dropdown-menu account-dropdown dropdown-menu-right">
+                                                <a class="link-item" href="my_freelancer_dashboard.html">Dashboard</a>
+                                                <a class="link-item" href="my_freelancer_setting.html">Setting</a>
+                                                <a class="link-item" href="my_freelancer_messages.html">Messages</a>
+                                                <a class="link-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                                    Logout</a>
+                                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                    @csrf
+                                                </form>
+                                            </div>
+                                            @endguest
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 </head>
 
 <body>
-    <div id="wrapper">
 
-        <header id="header-container">
+    @yield('content')
 
-            <div id="header">
-                <div class="container">
+    <!-- footer Start -->
+    <footer class="footer">
 
-                    <div class="left-side">
-                        <div id="logo" style="border: none">
-                            <a href="{{ url('/') }}"><img src="/images/logo.png" alt=""></a>
+        <div class="copy-social">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="copyright">
+                            <i class="far fa-copyright"></i>Copyright 2020 <a href="{{ url('/') }}">Skillpark Inc.</a>. All Right Reserved.
                         </div>
-                        @auth
-                        <div class="header-widget" style="border: none;float:right">
-                            <a href="{{ route('logout') }}" style="top: 20%;background-color:#0bb744;color:white;" class="button gray ripple-effect  button-sliding-icon" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                Logout <i class="icon-feather-log-out"></i></a>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                @csrf
-                            </form>
-                        </div>
-                        @endauth
                     </div>
-                </div>
-            </div>
-
-        </header>
-        <div class="clearfix"></div>
-
-        @yield('content')
-
-        <div id="footer">
-
-            <!-- Footer Copyrights -->
-            <div class="footer-bottom-section">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            © 2020 <strong>SKILLPARK</strong>. All Rights Reserved.
+                    <div class="col-lg-6 col-md-6">
+                        <div class="social-icons">
+                            <ul>
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                                <li><a href="#"><i class="fab fa-github"></i></a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
-
-    </div>
+    </footer>
+    <!-- footer End -->
 
     <script>
-        window.fbAsyncInit = function() {
-            FB.init({
-                appId: '288212299120003',
-                autoLogAppEvents: true,
-                xfbml: true,
-                version: 'v7.0'
-            });
-        };
+        window.oncontextmenu = function() {
+            return false;
+        }
+        $(document).keydown(function(event) {
+            if (event.keyCode == 123) {
+                return false;
+            } else if ((event.ctrlKey && event.shiftKey && event.keyCode == 73) || (event.ctrlKey && event.shiftKey && event.keyCode == 74)) {
+                return false;
+            }
+        });
     </script>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
-
-
-    <script src="/js/jquery-3.3.1.min.js"></script>
-    <script src="/js/jquery-migrate-3.0.0.min.js"></script>
-    <script src="/js/mmenu.min.js"></script>
-    <script src="/js/tippy.all.min.js"></script>
-    <script src="/js/bootstrap-select.min.js"></script>
-    <script src="/js/slick.min.js"></script>
-    <script src="/js/custom.js"></script>
-    <script src="/js/simplebar.min.js"></script>
-    <script src="/js/bootstrap-slider.min.js"></script>
-    <script src="/js/snackbar.js"></script>
-    <script src="/js/clipboard.min.js"></script>
-    <script src="/js/counterup.min.js"></script>
-    <script src="/js/magnific-popup.min.js"></script>
+    <!-- Scripts js -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/vendor/OwlCarousel/owl.carousel.js"></script>
 
 </body>
 

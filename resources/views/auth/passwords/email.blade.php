@@ -1,52 +1,49 @@
 @extends('layouts.security')
 
-
 @section('content')
-<!-- Page Content
-================================================== -->
-<div class="container">
-    <div class="row" style="margin-top: 40px;margin-bottom:30px;">
-        <div class="col-xl-4 offset-xl-4">
+<script>
+    document.title = 'Reset Password | SKILLPARK - Hire Expert Freelancers Any Time';
+</script>
 
-            <div class="login-register-page">
-                <!-- Welcome Text -->
-                <div class="welcome-text">
-                    <h3>Reset Your Password</h3>
-                </div>
-                @if (session('status'))
-                <div class="notification notice" role="alert">
-                    {{ session('status') }}
-                </div>
-                @endif
-                <!-- Form -->
-                <form method="POST" action="{{ route('password.email') }}">
-                    @csrf
-
-                    @error('email')
-                    <span class="invalid-feedback" style="color:red;" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                    @enderror
-                    <div class="input-with-icon-left">
-                        <i class="icon-material-baseline-mail-outline"></i>
-                        <input id="email" type="text" class="input-text with-border @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="Email Address" />
-
+<!-- Login -->
+<main class="browse-section" style="padding: 30;">
+    <div class="container">
+        <div class="row justify-content-center d-flex vh-100">
+            <div class="col-lg-4 mx-auto">
+                <div class="osahan-login py-4" style="font-size: 13px !important;">
+                    <div class="text-center mb-4">
+                        <a href="{{ url('/') }}"><img src="{{ asset('images/fav-miver.svg') }}" alt=""></a>
+                        <h5 class="font-weight-bold mt-3">First, let's find your account</h5>
+                        <p class="text-muted">Please enter your email or phone</p>
                     </div>
+                    @if (session('status'))
+                    <div class="notification notice" style="text-align: center;" role="alert">
+                        <span class="feedback" style="color:#1dc8cc;" role="alert"> {{ session('status') }} </span>
+                    </div>
+                    @endif
+
+                    <form method="POST" action="{{ route('password.email') }}">
+                        @csrf
+                        <div class="form-group">
+                            <label class="mb-1">Email Address</label>
+                            <div class="position-relative icon-form-control">
+                                <i class="fas fa-user position-absolute"></i>
+                                <input type="email" class="form-control" name="email" value="{{ old('email') }}">
+                                @error('email')
+                                <span class="feedback" style="color:red;" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                            </div>
+                        </div>
+                        <button class="btn btn-success btn-block text-uppercase" type="submit"> Find account </button>
+                    </form>
+                </div>
             </div>
-
-            <button class="button full-width button-sliding-icon ripple-effect margin-top-10" type="submit">{{ __('Send Password Reset Link') }}<i class="icon-material-outline-arrow-right-alt"></i></button>
-
-            </form>
         </div>
-
     </div>
-</div>
-</div>
-
-
-<!-- Spacer -->
-<div class="margin-top-70"></div>
-<!-- Spacer / End-->
-
+    </div>
+</main>
+<!-- End Login -->
 
 @endsection

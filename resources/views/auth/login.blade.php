@@ -1,102 +1,86 @@
 @extends('layouts.security')
 
 @section('content')
-
-<div class="container">
-    <div class="row" style="margin-top: 20px;margin-bottom:30px;">
-        <div class="col-xl-4 offset-xl-7">
-
-
-            <div class="login-register-page">
-                <!-- Welcome Text -->
-                <div class="welcome-text">
-                    <h3>Login To Skillpark!</h3>
-                    <span>Don't have an account? <a href="{{ route('register') }}">Sign Up!</a></span>
-                </div>
-
-                <!-- Form -->
-                <form method="POST" action="{{ route('login') }}">
-                    @csrf
-
-                    @error('email')
-                    <span class="feedback" style="color:red;" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                    @enderror
-                    <div class="input-with-icon-left">
-                        <i class="icon-material-baseline-mail-outline"></i>
-                        <input id="email" type="text" class="input-text with-border @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="Email Address" />
-
-                    </div>
-
-                    @error('password')
-                    <span class="feedback" style="color:red;" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                    @enderror
-                    <div class="input-with-icon-left">
-
-                        <i class="icon-material-outline-lock"></i>
-
-                        <input type="password" class="input-text with-border @error('password') is-invalid @enderror" name="password" id="password" placeholder="Password" autofocus />
-
-                    </div>
-
-                    @if (Route::has('password.request'))
-                    <a href="{{ route('password.request') }}">
-                        {{ __('Forgot Your Password?') }}
-                    </a>
-                    @endif
-
-                    <button class="button full-width button-sliding-icon ripple-effect margin-top-10" type="submit">{{ __('Login') }}<i class="icon-material-outline-arrow-right-alt"></i></button>
-
-                </form>
-                <!-- Social Login -->
-                <div class="social-login-separator"><span>or</span></div>
-                <center>
-
-                    <a href="{{ route('social.oauth', 'github') }}" style="height:40px;border-radius:3px" class="btn btn-block btn-social btn-github">
-                        <span class="fa fa-github"></span> Sign In with GitHub
-                    </a>
-
-                    <div class="margin-top-10"></div>
-
-                    <a href="{{ route('social.oauth', 'google') }}">
-                        <div class="google-btn">
-                            <div class="google-icon-wrapper">
-                                <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" />
-                            </div>
-                            <p class="btn-text">Sign In with Google</p>
-                        </div>
-                    </a>
-
-                    <div class="margin-top-10"></div>
-
-                    <a href="{{ route('social.oauth', 'twitter') }}" style="height:40px;border-radius:3px" class="btn btn-block btn-social btn-twitter">
-                        <span class="fa fa-twitter"></span> Sign In with Twitter
-                    </a>
-
-                    <div class="margin-top-10"></div>
-                    <a>
-                        <div class="fb-login-button" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="true" data-width="330"></div>
-                    </a>
-
-                    <div class="margin-top-10"></div>
-
-                </center>
-                <a href="{{ route('social.oauth', 'facebook') }}"><button class="facebook-login ripple-effect" style="width: 100%"><i class="icon-brand-facebook"></i> Sign In via Facebook</button></a>
-            </div>
-        </div>
-
-    </div>
-</div>
-</div>
-
-<!-- Spacer -->
-<div class="margin-top-70"></div>
-<!-- Spacer / End-->
 <script>
-    document.title = 'Login | SKILLPARK - Any Job Any Time';
+    document.title = 'Login | SKILLPARK - Hire Expert Freelancers Any Time';
 </script>
 
-@endsection
+<!-- Login -->
+<main class="browse-section" style="padding: 0;">
+    <div class="container">
+        <div class="row justify-content-center align-items-center d-flex vh-100">
+            <div class="col-lg-4 mx-auto">
+                <div class="osahan-login py-4" style="font-size: 13px !important;">
+                    <div class="text-center mb-4">
+                        <a href="{{ url('/') }}"><img src="images/fav-miver.svg" style="width: 50px;" alt=""></a>
+                        <h5 class="font-weight-bold mt-3">Welcome Back</h5>
+                        <p class="text-muted" style="font-size: 12px;">Don't miss your next opportunity. Sign in to stay updated on your freelancing world.</p>
+                    </div>
+
+                    <form method="POST" action="{{ route('login') }}">
+                        @csrf
+
+                        <div class="form-group">
+                            <label class="mb-1">Email Address</label>
+                            <div class="position-relative icon-form-control">
+                                <i class="fas fa-user position-absolute"></i>
+                                <input type="email" name="email" value="{{ old('email') }}" class="form-control">
+                                @error('email')
+                                <span class="feedback" style="color:red;" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="mb-1">Password</label>
+                            <div class="position-relative icon-form-control">
+                                <i class="fas fa-key position-absolute"></i>
+                                <input type="password" name="password" id="password" class="form-control"/>
+                                @error('password')
+                                <span class="feedback" style="color:red;" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="custom-control custom-checkbox mb-3">
+                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                            <label class="custom-control-label" for="customCheck1">Remember password</label>
+                        </div>
+                        <button class="btn btn-success btn-block text-uppercase" type="submit"> Sign in </button>
+                        <div class="text-center mt-3 border-bottom pb-3">
+                            <p class="small text-muted">or login with</p>
+                            <div class="row">
+                                <div class="col-6">
+                                    <a href="{{ route('social.oauth', 'google') }}"> <button type="button" class="btn btn-outline-google btn-block"><i class="fab fa-google"></i> Google</button></a>
+                                </div>
+                                <div class="col-6">
+                                    <a href="{{ route('social.oauth', 'facebook') }}"> <button type="button" class="btn btn-outline-facebook btn-block"><i class="fab fa-facebook"></i> Facebook</button></a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <a href="{{ route('social.oauth', 'twitter') }}"><button type="button" class="btn btn-outline-twitter btn-block"><i class="fab fa-twitter"></i> Twitter</button></a>
+                                </div>
+                                <div class="col-6">
+                                    <a href="{{ route('social.oauth', 'github') }}"> <button type="button" class="btn btn-outline-github btn-block"><i class="fab fa-github"></i> GitHub</button></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="py-3 d-flex align-item-center">
+                            @if (Route::has('password.request'))
+                            <a href="{{ route('password.request') }}">
+                               @endif 
+                               Forgot password?</a>
+                            <span class="ml-auto"> New to Skillpark? <a href="{{ route('register') }}">Join now</a></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+    <!-- End Login -->
+
+    @endsection

@@ -7,7 +7,7 @@
       }
 
       .cls-2 {
-        fill: #e1e1e1;
+        fill: #1dc8cc;
         filter: url(#gradient-overlay-1);
       }
     </style>
