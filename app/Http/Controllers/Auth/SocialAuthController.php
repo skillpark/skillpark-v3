@@ -87,7 +87,7 @@ class SocialAuthController extends Controller
      */
     protected function sendSuccessResponse()
     {
-        return redirect()->intended('/register/add-information');
+        return redirect()->intended('/register/select-profile');
     }
 
     /**
