@@ -696,7 +696,7 @@ header {
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: rgba(36, 36, 36) !important;
+    color: rgba(36, 36, 36) ;
     font-size: 14px;
 }
 
@@ -2092,8 +2092,7 @@ span.right-cm {
 }
 
 .btn-153:hover {
-    color: #fff !important;
-    background: #ffffff !important
+    opacity:0.9;
 }
 
 .footer {
@@ -2451,7 +2450,7 @@ span.right-cm {
 .browse-section {
     float: left;
     width: 100%;
-    padding: 80px 0;
+    padding: 40px 0;
 }
 
 .browser-job-filters {
@@ -6141,7 +6140,7 @@ span.right-cm {
     padding: 0 30px 30px;
 }
 
-.plan_btn a {
+.plan_btn a, .plan_btn button {
     float: left;
     width: 100%;
     height: 50px;
@@ -6153,10 +6152,11 @@ span.right-cm {
     font-weight: 500;
     font-family: 'Muli', sans-serif;
     padding: 15px 0;
+    border:none;
 }
 
-.plan_btn a:hover {
-    background: #242424;
+.plan_btn a, .plan_btn button:hover {
+    background: #1bb7bb;
     color: #fff !important;
 }
 

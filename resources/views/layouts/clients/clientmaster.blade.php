@@ -1,296 +1,361 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>My Job Feed</title>
-    <link rel="icon" type="image/png" href="/images/titlelogo.png">
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=9">
+    <meta name="description" content="skillpark">
+    <meta name="author" content="skillpark">
 
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/color.css">
+    <!-- Favicon Icon -->
+    <link rel="icon" type="image/png" href="/images/fav-miver.svg">
+
+    <link rel="stylesheet" type="text/css" href="/vendor/semantic/semantic.min.css">
+    <link href="/css/responsive.css" rel="stylesheet">
+    <link href="/css/datepicker.min.css" rel="stylesheet">
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/profileheader.css" rel="stylesheet">
+
 </head>
 
-<body class="gray" style="background-color: #f2f2f2;">
-
-    <!-- Wrapper -->
-    <div id="wrapper">
-
-        <header id="header-container" class="fullwidth">
-
-            <!-- Header -->
-            <div id="header">
-                <div class="container" style="padding-right:130px;">
-
-                    <!-- Left Side Content -->
-                    <div class="left-side">
-
-                        <!-- Logo -->
-                        <div id="logo" style="border: none;">
-                            <a href=" {{ url('home')}}"><img src="images/logo.png" alt=""></a>
-                        </div>
-
-                        <!-- Main Navigation -->
-                        <nav id="navigation" style="float: right;">
-                            <ul id="responsive" style="font-weight: 600;">
-                                <li>
-                                    <a href="" class="current">FIND WORK</a>
-                                </li>
-
-                                <li>
-                                    <a href="">MY JOBS</a>
-                                </li>
-
-                                <li>
-                                    <a href="">REPORTS</a>
-                                </li>
-
-                                <li>
-                                    <a href="">HELP <i class="icon-line-awesome-question-circle"></i></a>
-                                </li>
-                            </ul>
-                        </nav>
-                        <div class="clearfix"></div>
-
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light topbar static-top shadow-sm bg-white osahan-nav-top px-0"
+        style="padding: 7px !important;font-size:13px">
+        <div class="container">
+            <!-- Sidebar Toggle (Topbar) -->
+            <a class="navbar-brand" href="index.html"><img src="/images/logo.svg" alt=""></a>
+            <!-- Topbar Search -->
+            <form class="d-none d-sm-inline-block form-inline mr-auto my-2 my-md-0 mw-200 navbar-search">
+                <div class="input-group">
+                    <input type="text" class="form-control bg-white small" placeholder="Find Services..."
+                        aria-label="Search" aria-describedby="basic-addon2" style="font-size: 13px;">
+                    <div class="input-group-append">
+                        <button class="btn btn-success" type="button" style="font-size: 13px;">
+                            <i class="fa fa-search fa-sm"></i>
+                        </button>
                     </div>
-                    <div class="right-side">
-
-
-                        <div class="header-widget hide-on-mobile" style="padding:0 5px;">
-
-                            <!-- Messages -->
-                            <div class="header-notifications">
-
-
-                                <div class="header-notifications-trigger">
-                                    <a href="#"><i class="icon-feather-message-square"></i><span>1</span></a>
-                                </div>
-
-                                <!-- Dropdown -->
-                                <div class="header-notifications-dropdown">
-
-                                    <div class="header-notifications-headline">
-                                        <h4>Messages</h4>
-                                        <button class="mark-as-read ripple-effect-dark" title="Mark all as read" data-tippy-placement="left">
-                                            <i class="icon-feather-check-square"></i>
-                                        </button>
-                                    </div>
-
-                                    <div class="header-notifications-content">
-                                        <div class="header-notifications-scroll" data-simplebar>
-                                            <ul>
-                                                <!-- Notification -->
-                                                <li class="notifications-not-read">
-                                                    <a href="">
-                                                        <span class="notification-avatar status-online"><img alt="{{Auth::user()->name}}" src="{{ auth()->user()->avatar }}"></span>
-                                                        <div class="notification-text">
-                                                            <strong>Client</strong>
-                                                            <p class="notification-msg-text">Thanks for reaching out.
-                                                                I'm quite busy right now on many...</p>
-                                                            <span class="color">4 hours ago</span>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <a href="" class="header-notifications-button ripple-effect button-sliding-icon">View All
-                                        Messages<i class="icon-material-outline-arrow-right-alt"></i></a>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="header-widget">
-
-                            <!-- Messages -->
-                            <div class="header-notifications user-menu">
-                                <div class="header-notifications-trigger">
-                                    <a href="#">
-                                        <div class="user-avatar status-online"><img alt="{{Auth::user()->name}}" src="{{ auth()->user()->avatar }}"></div>
-                                    </a>
-                                </div>
-
-                                <!-- Dropdown -->
-                                <div class="header-notifications-dropdown" style="width: 350px;">
-
-                                    <!-- User Status -->
-                                    <div class="user-status">
-
-                                        <!-- User Name / Avatar -->
-                                        <a href="">
-                                            <div class="user-details">
-                                                <div class="user-avatar status-online"><img alt="{{Auth::user()->name}}" src="{{ auth()->user()->avatar }}"></div>
-                                                <div class="user-name">
-                                                    {{Auth::user()->name}}<span>Freelancer</span>
-                                                </div>
-                                            </div>
-                                        </a>
-
-                                        <!-- User Status Switcher -->
-                                        <div class="status-switch" id="snackbar-user-status">
-                                            <label class="user-online current-status">Online</label>
-                                            <label class="user-invisible">Invisible</label>
-                                            <!-- Status Indicator -->
-                                            <span class="status-indicator" aria-hidden="true"></span>
-                                        </div>
-                                    </div>
-
-                                    <ul class="user-menu-small-nav" style="font-size: 18px;">
-                                        <li><a href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();"><i class="icon-material-outline-power-settings-new"></i>
-                                                Logout</a></li>
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            @csrf
-                                        </form>
-                                    </ul>
-
-                                </div>
-                            </div>
-
-                        </div>
-                        <span class="mmenu-trigger">
-                            <button class="hamburger hamburger--collapse" type="button">
-                                <span class="hamburger-box">
-                                    <span class="hamburger-inner"></span>
-                                </span>
-                            </button>
-                        </span>
-
-                    </div>
-
                 </div>
-            </div>
-        </header>
+            </form>
+            <!-- Topbar Navbar -->
+            <ul class="navbar-nav align-items-center ml-auto">
+                <li class="nav-item dropdown no-arrow no-caret mr-3 dropdown-notifications d-sm-none">
+                    <a class="btn btn-icon btn-transparent-dark dropdown-toggle" href="#" id="searchDropdown"
+                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-search fa-fw"></i>
+                    </a>
+                    <!-- Dropdown - Messages -->
+                    <div class="dropdown-menu dropdown-menu-right p-3 shadow-sm animated--grow-in"
+                        aria-labelledby="searchDropdown">
+                        <form class="form-inline mr-auto w-100 navbar-search">
+                            <div class="input-group">
+                                <input type="text" class="form-control bg-light border-0 small"
+                                    placeholder="Find Services..." aria-label="Search" aria-describedby="basic-addon2">
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary" type="button">
+                                        <i class="fa fa-search fa-sm"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </li>
 
-        <!-- Dashboard Container -->
-        <div class="dashboard-container">
-
-            <!-- Dashboard Sidebar
-	 ================================================== -->
-            <div class="dashboard-sidebar">
-                <div class="dashboard-sidebar-inner" data-simplebar>
-                    <div class="dashboard-nav-container">
-
-                        <!-- Responsive Navigation Trigger -->
-                        <a href="#" class="dashboard-responsive-nav-trigger">
-                            <span class="hamburger hamburger--collapse">
-                                <span class="hamburger-box">
-                                    <span class="hamburger-inner"></span>
-                                </span>
-                            </span>
-                            <span class="trigger-title">Dashboard Navigation</span>
+                <li class="nav-item dropdown no-arrow no-caret mr-3 dropdown-notifications">
+                    <a class="btn btn-icon btn-transparent-dark dropdown-toggle" id="navbarDropdownMessages"
+                        href="javascript:void(0);" role="button" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-mail">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right border-0 shadow animated--fade-in-up"
+                        aria-labelledby="navbarDropdownMessages">
+                        <h6 class="dropdown-header dropdown-notifications-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-mail mr-2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            Message Center
+                        </h6>
+                        <a class="dropdown-item dropdown-notifications-item" href="#!">
+                            <img class="dropdown-notifications-item-img" src="/{{ Auth::user()->avatar }}">
+                            <div class="dropdown-notifications-item-content">
+                                <div class="dropdown-notifications-item-content-text">Lorem ipsum dolor sit amet,
+                                    consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                                    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                                    laborum.</div>
+                                <div class="dropdown-notifications-item-content-details">Emily Fowler · 58m</div>
+                            </div>
                         </a>
+                        <a class="dropdown-item dropdown-notifications-item" href="#!">
+                            <img class="dropdown-notifications-item-img" src="/{{ Auth::user()->avatar }}">
+                            <div class="dropdown-notifications-item-content">
+                                <div class="dropdown-notifications-item-content-text">Lorem ipsum dolor sit amet,
+                                    consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                                    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                                    laborum.</div>
+                                <div class="dropdown-notifications-item-content-details">Diane Chambers · 2d</div>
+                            </div>
+                        </a>
+                        <a class="dropdown-item dropdown-notifications-footer" href="messages.html">Read All
+                            Messages</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown no-arrow no-caret dropdown-user">
+                    <a class="btn btn-icon btn-transparent-dark dropdown-toggle" id="navbarDropdownUserImage"
+                        href="javascript:void(0);" role="button" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false"><img class="img-fluid" src="/{{ Auth::user()->avatar }}"></a>
+                    <div class="dropdown-menu dropdown-menu-right border-0 shadow animated--fade-in-up"
+                        aria-labelledby="navbarDropdownUserImage">
+                        <h6 class="dropdown-header d-flex align-items-center">
+                            <img class="dropdown-user-img" src="/{{  Auth::user()->avatar }} ">
+                            <div class=" dropdown-user-details">
+                                <div class="dropdown-user-details-name">{{ Auth::user()->name }}</div>
+                                <div class="dropdown-user-details-email">{{ Auth::user()->email }}</div>
+                            </div>
+                        </h6>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="{{ url('home') }}">
+                            <div class="dropdown-item-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-settings">
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                    <path
+                                        d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                                    </path>
+                                </svg>
+                            </div>
+                            Account
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <div class="dropdown-item-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-log-out">
+                                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                                    <polyline points="16 17 21 12 16 7"></polyline>
+                                    <line x1="21" y1="12" x2="9" y2="12"></line>
+                                </svg>
+                            </div>
+                            Logout
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white osahan-nav-mid px-0 border-top shadow-sm">
+        <div class="container">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Home
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownPortfolio">
+                            <a class="dropdown-item" href="index.html">Home 1</a>
+                            <a class="dropdown-item" href="index2.html">Home 2</a>
+                            <a class="dropdown-item" href="index3.html">Home 3</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Pages
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownPortfolio">
+                            <a class="dropdown-item" href="product.html">Product List</a>
+                            <a class="dropdown-item" href="product2.html">Product List 2</a>
+                            <a class="dropdown-item" href="product-detail.html">List Detail</a>
+                            <a class="dropdown-item" href="profile.html">Profile</a>
+                            <a class="dropdown-item" href="company-profile.html">Company Profile</a>
+                            <a class="dropdown-item" href="alerts.html">Alerts</a>
+                            <a class="dropdown-item" href="messages.html">Messages</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Other Pages
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownBlog">
+                            <a class="dropdown-item" href="login.html">Login</a>
+                            <a class="dropdown-item" href="register.html">Register</a>
+                            <a class="dropdown-item" href="forgot-password.html">Forgot Password</a>
+                            <a class="dropdown-item" href="faq.html">FAQ</a>
+                            <a class="dropdown-item" href="404.html">404 Page</a>
+                            <a class="dropdown-item" href="blank.html">Blank Page</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="become-a-seller.html">
+                        <i class="fa fa-fw fa-trophy"></i>
+                        <span>Become A Seller</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">
+                        <img class="country-flag img-fluid" src="/images/en.svg">
+                        <span>English</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-                        <!-- Navigation -->
-                        <div class="dashboard-nav">
-                            <div class="dashboard-nav-inner">
-                                <ul data-submenu-title="Start">
-                                    <li class="{{ (request()->is('home*')) ? 'active' : '' }}"><a href="{{ url('home') }}"><i class="icon-material-outline-home"></i> My
-                                            Feed</a></li>
-                                    <li class="{{ (request()->is('recommended*')) ? 'active' : '' }}"><a href="{{ url('home') }}"><i class="icon-material-outline-question-answer"></i> Recommended <span class="nav-tag">6</span></a></li>
-                                </ul>
+    @yield('content')
 
-                                <ul data-submenu-title="Search">
-                                    <!-- Location -->
-                                    <div class="sidebar-widget col-xl-12" style="margin-bottom: 20px;margin-top:20px">
-                                        <div class="input-with-icon">
-                                            <div id="autocomplete-container">
-                                                <input id="autocomplete-input" type="text" placeholder="Location">
-                                            </div>
-                                            <i class="icon-material-outline-location-on"></i>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-xl-12 col-md-6">
-                                        <div class="section-headline margin-top-20 margin-bottom-20">
-                                        </div>
-                                        <select class="selectpicker" title="Select Category" data-live-search="true">
-                                            <option>Admin Support</option>
-                                            <option>Customer Service</option>
-                                            <option>Data Analytics</option>
-                                            <option>Design & Creative</option>
-                                            <option>Software Developing</option>
-                                            <option>IT & Networking</option>
-                                            <option>Writing</option>
-                                            <option>Translation</option>
-                                            <option>Sales & Marketing</option>
-                                        </select>
-                                    </div>
-                                </ul>
-
-
-                                <ul data-submenu-title="Organize and Manage">
-                                    <li><a href="#"><i class="icon-material-outline-assignment"></i> Tasks</a>
-                                        <ul>
-                                            <li><a href="">My Tasks <span class="nav-tag">2</span></a></li>
-                                            <li><a href="{{ url('post-project') }}">Post Proposal</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-
-                                <ul data-submenu-title="Account">
-
-                                    <li><a href="{{ url('dashboard') }}"><i class="icon-material-outline-dashboard"></i>
-                                            Dashboard</a></li>
-                                    <li><a href="{{ url('settings') }}"><i class="icon-material-outline-settings"></i>
-                                            Settings</a></li>
-
-                                    <li><a href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();"><i class="icon-material-outline-power-settings-new"></i>
-                                            Logout</a></li>
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </ul>
+    <!-- footer Start -->
+    <footer class="footer">
+        <div class="subscribe-newsletter">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="subcribes">
+                            <div class="text-step1">
+                                <div class="btext-heading mt-2" style="color:#acacac; font-size:14px;">
+                                    <i class="fas fa-check-circle"></i>All Rights Reserved &reg; Sushant Poudel, Nitika
+                                    Bhatta and Divesh Thapa.
+                                </div>
                             </div>
                         </div>
-                        <!-- Navigation / End -->
+                    </div>
+                    <div class="col-lg-5 col-md-6">
+                        <a class="order-1 order-lg-0 ml-lg-0 ml-3 mr-auto" style="float: right;margin-top:.5rem"
+                            href="index.html"><img src="/images/logo.svg" alt=""></a>
 
                     </div>
                 </div>
             </div>
-
-            <div class="dashboard-content-container" data-simplebar>
-                <div class="dashboard-content-inner">
-
-                    @yield('content')
-
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3">
+                    <div class="about-jobby">
+                        <a href="index.html"><img src="images/profilelogo.png" width="30" alt=""></a>
+                        <p>SKILLPARK INC. is a incorporated company which is legally acceptable nationwide. The
+                            application is a Nepal National Payment Gateway Verified website. Trusted by the Government
+                            of Nepal. &copy; Skillpark Inc.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3">
+                    <div class="footer-links">
+                        <h4>About</h4>
+                        <ul class="list">
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Press &amp; News</a></li>
+                            <li><a href="#">Partnerships</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Intellectual Property Claims</a></li>
+                            <li><a href="#" target="_blank">Investor Relations</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3">
+                    <div class="footer-links">
+                        <h4>For Companies</h4>
+                        <ul class="list">
+                            <li><a href="#">Events</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Forum</a></li>
+                            <li><a href="#">Community Standards</a></li>
+                            <li><a href="#">Podcast</a></li>
+                            <li><a href="#">Affiliates</a></li>
+                            <li><a href="#">Invite a Friend</a></li>
+                            <li><a href="#">Become a Seller</a></li>
+                            <li><a href="#">Skillpark Elevate</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3">
+                    <div class="footer-links">
+                        <h4>Support</h4>
+                        <ul class="list">
+                            <li><a href="#">Help &amp; Support</a></li>
+                            <li><a href="#">Trust &amp; Safety</a></li>
+                            <li><a href="#">Selling on Skillpark
+                                </a>
+                            </li>
+                            <li><a href="#">Buying on Skillpark
+                                </a>
+                            </li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Forum</a></li>
+                            <li><a href="#">Community Standards</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-
         </div>
-    </div>
-
-    <script src="/js/jquery-3.3.1.min.js"></script>
-    <script src="/js/jquery-migrate-3.0.0.min.js"></script>
-    <script src="/js/mmenu.min.js"></script>
-    <script src="/js/tippy.all.min.js"></script>
-    <script src="/js/simplebar.min.js"></script>
-    <script src="/js/bootstrap-slider.min.js"></script>
-    <script src="/js/bootstrap-select.min.js"></script>
-    <script src="/js/snackbar.js"></script>
-    <script src="/js/clipboard.min.js"></script>
-    <script src="/js/counterup.min.js"></script>
-    <script src="/js/magnific-popup.min.js"></script>
-    <script src="/js/slick.min.js"></script>
-    <script src="/js/custom.js"></script>
-
-    <!-- Snackbar // documentation: https://www.polonel.com/snackbar/ -->
-    <script>
-        // Snackbar for user status switcher
-        $('#snackbar-user-status label').click(function() {
-            Snackbar.show({
-                text: 'Your status has been changed!',
-                pos: 'bottom-center',
-                showAction: false,
-                actionText: "Dismiss",
-                duration: 3000,
-                textColor: '#fff',
-                backgroundColor: '#383838'
-            });
-        });
-    </script>
+        <div class="copy-social">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="copyright">
+                            <i class="far fa-copyright"></i>Copyright 2020 <a href="{{ url('/') }}">Skillpark Inc.</a>.
+                            All Right Reserved.
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="social-icons">
+                            <ul>
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                                <li><a href="#"><i class="fab fa-github"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer End -->
+    <!-- Scroll to Top Button Start -->
+    <button onclick="topFunction()" id="pageup" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+    <!-- Scroll to Top Button End -->
+    <!-- Scripts js -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/datepicker.min.js"></script>
+    <script src="/js/i18n/datepicker.en.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/vendor/OwlCarousel/owl.carousel.js"></script>
+    <script src="/js/custom1.js"></script>
 
 </body>
 

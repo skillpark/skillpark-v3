@@ -217,19 +217,15 @@
                 <div class="col-md-6 col-12">
                     <div class="main-heading text-center">
                         <h2>Hire Freelancers</h2>
-                        <span>Quick and easy way to connect to on-demand talents..</span>
+                        <span>Quick and easy way to connect to on-demand talents.</span>
                         <div class="line-shape1">
                             <img src="images/line.svg" alt="">
                         </div>
                     </div>
-                    <div class="text152">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu purus et diam blandit
-                            vehicula sit amet sed metus. Fusce condimentum non neque at fringilla.</p>
-                    </div>
                     <div class="text-steps">
                         <div class="text-step1">
                             <div class="btext-heading">
-                                <i class="far fa-check-circle"></i>Hire for your company.
+                                <i class="far fa-check-circle"></i>Hire for your business.
                             </div>
                             <p>Aenean malesuada aliquet tincidunt. Nam a nisl mi. Fusce ornare fermentum enim, id
                                 interdum velit posuere quis.<p>
@@ -255,10 +251,6 @@
                         <div class="line-shape1">
                             <img src="images/line.svg" alt="">
                         </div>
-                    </div>
-                    <div class="text152">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu purus et diam blandit
-                            vehicula sit amet sed metus. Fusce condimentum non neque at fringilla.</p>
                     </div>
                     <div class="text-steps">
                         <div class="text-step1">
@@ -294,7 +286,7 @@
                 <h2>
                     Skillpark
                     Blogs
-                    <a style="font-size: 14px;color:inherit" href="{{ url('blogs') }}" class="float-right">See More guides <i class="fas fa-arrow-right"></i></a>
+                    <a style="font-size: 14px;color:inherit" href="https://kasari678290104.wordpress.com/" target="_blank" class="float-right">See More guides <i class="fas fa-arrow-right"></i></a>
                 </h2>
                 <div class="row">
                     <div class="col-md-4">

@@ -12,15 +12,16 @@
             <div class="col-lg-4 mx-auto">
                 <div class="osahan-login py-4" style="font-size: 13px !important;">
                     <div class="text-center mb-4">
-                        <a href="{{ url('/') }}"><img src="{{ asset('images/fav-miver.svg') }}" alt=""></a>
+                        <a href="{{ route('login') }}"><img src="{{ asset('images/fav-miver.svg') }}" alt=""></a>
                         <h5 class="font-weight-bold mt-3">First, let's find your account</h5>
-                        <p class="text-muted">Please enter your email or phone</p>
+                        <p class="text-muted">Please enter your email address</p>
+
+                        @if (session('status'))
+                        <div class="notification notice" style="text-align: center;" role="alert">
+                            <span class="feedback" style="color:#1bb7bb;font-weight:600" role="alert"> {{ session('status') }} </span>
+                        </div>
+                        @endif
                     </div>
-                    @if (session('status'))
-                    <div class="notification notice" style="text-align: center;" role="alert">
-                        <span class="feedback" style="color:#1dc8cc;" role="alert"> {{ session('status') }} </span>
-                    </div>
-                    @endif
 
                     <form method="POST" action="{{ route('password.email') }}">
                         @csrf
@@ -28,7 +29,7 @@
                             <label class="mb-1">Email Address</label>
                             <div class="position-relative icon-form-control">
                                 <i class="fas fa-user position-absolute"></i>
-                                <input type="email" class="form-control" name="email" value="{{ old('email') }}">
+                                <input type="email" class="form-control" name="email" value="{{ old('email') }}" autocomplete="off">
                                 @error('email')
                                 <span class="feedback" style="color:red;" role="alert">
                                     <strong>{{ $message }}</strong>

@@ -1,144 +1,76 @@
 @extends('layouts.security')
 
 @section('content')
-<style>
-    body,
-    html {
-        scroll-behavior: smooth;
-    }
-</style>
 
-
-<div class="container">
-    <div class="row" style="margin-top:20px;">
-        <div class="col-xl-6 offset-xl-3">
-
-            <div class="login-register-page">
-                <!-- Welcome Text -->
-                <p style="font-size: 16px;">Hello <strong>{{ Auth::user()->name }},</strong></p>
-
-                <div class="welcome-text">
-                    <h3 style="font-size: 20px;">Just a Few More Informations</h3>
+<!-- Body Start -->
+<main class="browse-section" style="padding: 20px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="choose_profile">
+                    <h3>Choose Your Profile</h3>
+                    <p>Which type of profile fits you best?</p>
                 </div>
-
-                <form method="POST" action="{{ route('addinformation') }}">
+                <form method="POST" action="{{ route('addprofile') }}">
                     @csrf
-                    <!-- Account Type -->
-                    <p>What do you wanna act as? <a href="#rolesinfo">(Learn More)</a></p>
-
-                    @error('role')
-                    <span class="feedback" style="color: red;" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                    @enderror
-                    <div class="account-type">
-                        <div>
-                            <input type="radio" name="role_id" value="1" id="freelancer-radio" class="account-type-radio" checked />
-                            <label for="freelancer-radio" class="ripple-effect-dark"><i class="icon-material-outline-account-circle"></i> Freelancer</label>
+                    <div class="plans150">
+                        <div class="row justify-content-md-center">
+                            <div class="col-lg-4 col-md-4">
+                                <div class="plan_item">
+                                    <div class="plan_icon1">
+                                        <div class="cfp_icon">
+                                            <img src="/images/cp_icon.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <h4>Freelancer</h4>
+                                    <div class="plan_price1">
+                                        <span>Start a Freelancer Profile</span>
+                                    </div>
+                                    <ul class="plan_dt1">
+                                        <li>
+                                            <p>01. Phasellus ac vulputate erat, sit amet tristique elit.</p>
+                                        </li>
+                                        <li>
+                                            <p>2. Ut sed ex nec tellus fermentum rhoncus et eget massa. Pellentesque sit amet felis nec nulla imperdiet varius.</p>
+                                        </li>
+                                    </ul>
+                                    <div class="plan_btn">
+                                        <button type="submit" name="role_id" value="1">Signup Freelancer Profile</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4">
+                                <div class="plan_item">
+                                    <div class="plan_icon1">
+                                        <div class="cfp_icon">
+                                            <img src="/images/fp_icon.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <h4>Employer</h4>
+                                    <div class="plan_price1">
+                                        <span>Start a Employer Profile</span>
+                                    </div>
+                                    <ul class="plan_dt1">
+                                        <li>
+                                            <p>01. Phasellus ac vulputate erat, sit amet tristique elit.</p>
+                                        </li>
+                                        <li>
+                                            <p>2. Ut sed ex nec tellus fermentum rhoncus et eget massa. Pellentesque sit amet felis nec nulla imperdiet varius.</p>
+                                        </li>
+                                    </ul>
+                                    <div class="plan_btn">
+                                        <button type="submit" name="role_id" value="2">Signup Company Profile</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-
-                        <div>
-                            <input type="radio" name="role_id" value="2" id="employer-radio" class="account-type-radio" />
-                            <label for="employer-radio" class="ripple-effect-dark"><i class="icon-material-outline-business-center"></i> Employer</label>
-                        </div>
                     </div>
-
-                    <!-- Form -->
-                    <p>Write Something about Yourself <i class="help-icon" data-tippy-placement="top" data-tippy-theme="dark" title="Minimum 50 characters required."></i></p>
-                    @error('about')
-                    <span class="feedback" style="color: red;" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                    @enderror
-                    <div class="input">
-                        <textarea rows="6" cols="12" maxlength="200" minlength="50" class="input-text with-border" name="about" placeholder="Write about your skills, interests, hobbies..." required>{{ Auth::user()->about }}</textarea>
-                    </div>
-
-                    <p>Where are you from? <i class="help-icon" data-tippy-placement="right" data-tippy-theme="dark" title="Your district or City."></i></p>
-                    @error('city_id')
-                    <span class="feedback" style="color: red;" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                    @enderror
-                    <div class="sidebar-widget">
-                        <select name="city_id" class="selectpicker with-border" data-size="5" title="Select Your City" data-live-search="true" required>
-                            @foreach ($cities as $city)
-                            <option value="{{ $city->id }}">{{ $city->name }}</option>
-                            @endforeach
-                        </select>
-                    </div>
-
-                    <button class="button full-width button-sliding-icon ripple-effect margin-top-10" type="submit">{{ __('Continue To Skillpark') }} <i class="icon-material-outline-arrow-right-alt"></i></button>
                 </form>
-                <div id="rolesinfo"></div>
-                <div class="margin-top-60"></div>
-
-                <div class="social-login-separator"></div>
-
-                <div class="margin-top-95"></div>
-
-                <div class="col-xl-12">
-
-                    <div class="pricing-plans-container">
-                        <div class="pricing-plan recommended">
-                            <div class="recommended-badge">Roles Information</div>
-                            <div class="billing-cycle-radios margin-bottom-20">
-                                <div class="radio billed-monthly-radio">
-                                    <input id="radio-5" name="radio-payment-type" type="radio" checked>
-                                    <label for="radio-5"><span class="radio-label"></span> Freelancers</label>
-                                </div>
-
-                                <div class="radio billed-yearly-radio">
-                                    <input id="radio-6" name="radio-payment-type" type="radio">
-                                    <label for="radio-6"><span class="radio-label"></span> Employers</label>
-                                </div>
-                            </div>
-
-                            <div class="pricing-plan-label billed-monthly-label">
-                                <h3 class="margin-top-10 margin-bottom-20">Freelancers completes submitted Jobs and
-                                    Projects.</h3>
-
-                                <div class="pricing-plan-features">
-                                    <p style="font-weight: 900; font-size:16px;">Features of Freelancing:</p>
-                                    <ul style="color:#686868; font-weight:400">
-                                        <li>Jobs Search</li>
-                                        <li>Open Bidding for Projects</li>
-                                        <li>Proposal Display</li>
-                                        <li>Category and Skills</li>
-                                        <li>Simplified Payment System</li>
-                                        <li>Verified National Payment Gateway</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="pricing-plan-label billed-yearly-label">
-                                <h3 class="margin-top-10 margin-bottom-20">Employers submit the projects required for
-                                    completion.</h3>
-                                <div class="pricing-plan-features">
-                                    <p style="font-weight: 900; font-size:16px;">Features of Hiring:</p>
-                                    <ul style="color:#686868; font-weight:400">
-                                        <li>Freelancers Listings</li>
-                                        <li>Request by Skilled Resources</li>
-                                        <li>Fast and Relaible Verified Users</li>
-                                        <li>Category and Skills</li>
-                                        <li>Simplified Payment System</li>
-                                        <li>Verified National Payment Gateway</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
     </div>
-</div>
-
-<!-- Spacer -->
-<div class="margin-top-20"></div>
-<!-- Spacer / End-->
+</main>
+<!-- Body End -->
 
 
 @endsection

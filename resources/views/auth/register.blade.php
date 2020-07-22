@@ -14,7 +14,7 @@
                     <div class="text-center mb-4">
                         <a href="{{ url('/') }}"><img src="images/fav-miver.svg" style="width: 50px;" alt=""></a>
                         <h5 class="font-weight-bold mt-3" style="font-size: 1.25rem;">Join Skillpark</h5>
-                        <p class="text-muted" style="color:#6c757d;font-size:12px">Connect with the verified businesses and clients. Make the most of your freelancing
+                        <p class="text-muted" style="color:#6c757d;font-size:12px">Connect with the verified businesses and clients and make the most of your freelancing
                             life. </p>
                     </div>
                     <form method="POST" action="{{ route('register') }}">
@@ -60,7 +60,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="mb-1">You agree to the SkillPark Inc. <a href="{{ url('agreement') }}" style="color: #1dbf73;">User Agreement</a>, <a style="color: #1dbf73;" href="{{ url('policy') }}">Privacy Policy</a>, and <a href="{{ url('policy') }}" style="color: #1dbf73;">Cookie Policy</a>.</label>
+                            <label class="mb-1">You agree to the SkillPark Inc. <a href="{{ url('agreement') }}" style="color: #1dbf73;">User Agreement</a>, <a style="color: #1dbf73;" href="{{ url('policy') }}">Privacy Policy</a>, and <a href="{{ url('cookies') }}" style="color: #1dbf73;">Cookie Policy</a>.</label>
                         </div>
                         <button class="btn btn-success btn-block text-uppercase" type="submit"> Agree & Join </button>
                         <div class="text-center mt-3 border-bottom pb-3">

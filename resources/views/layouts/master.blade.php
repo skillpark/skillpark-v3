@@ -129,9 +129,12 @@
                                         <a class="nav-link" href="{{ url('/') }}">Solutions</a>
                                     </li>
                                     <li class="nav-item dropdown">
+                                        <a class="nav-link" href="{{ url('/') }}">Enterprise</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
                                         <a href="#" class="nav-link dropdown-toggle-no-caret" role="button" data-toggle="dropdown">Explore</a>
                                         <div class="dropdown-menu pages-dropdown">
-                                            <a class="link-item" href="{{ url('/') }}">Enterprises</a>
+                                            <a class="link-item" href="{{ url('/') }}">Companies</a>
                                             <a class="link-item" href="{{ url('/') }}">Freelancers</a>
                                         </div>
                                     </li>

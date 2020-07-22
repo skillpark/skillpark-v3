@@ -1,7 +1,20 @@
 <?php
 
+use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
 
 Route::get('/', function () {
     return view('index');
@@ -20,22 +33,18 @@ Route::get('/contactus', function () {
     return view('about.contact');
 });
 
+Route::get('/add', function () {
+    return view('auth.addinfo');
+});
+
 // |=================LOGGED IN USER==========================|
 
 Auth::routes(['verify' => true]);
-//registration
-//select-profile
-Route::get('register/select-profile', 'Auth\ProfileInfoController@showProfile');
-Route::post('register/select-profile', 'Auth\ProfileInfoController@addProfile')->name('addprofile');
-//add details
-//freelancer
-Route::get('fp/user-details', 'ProfileDetailsController@freelancerProfileDetails');
-Route::post('fp/user-details', 'Auth\ProfileDetailsController@addfreelancerProfileDetails')->name('freelancerdetails');
-//client
-Route::get('cp/user-details', 'ProfileDetailsController@clientProfileDetails');
-Route::post('cp/user-details', 'Auth\ProfileDetailsController@addclientProfileDetails')->name('clientdetails');
-//end registration
-//user feeds
+
+Route::get('register/add-information', 'Auth\RegisterInfoController@showForm')->middleware('verified');
+Route::post('register/add-information', 'Auth\RegisterInfoController@postProfile')->name('addprofile');
+Route::post('register/add-information', 'Auth\RegisterInfoController@postProfileDetails')->name('profiledetails');
+
 Route::get('/home', 'HomeController@index')->middleware('verified')->name('home');
 Route::post('/home', 'UserController@store');
 
@@ -45,6 +54,10 @@ Route::get('/task', 'Freelancer\FreelancerController@task')->middleware('verifie
 Route::get('/client', function () {
     return view('/clients.home');
 })->Middleware(['client'])->name('client');
+
+//user settings
+Route::get('/settings', 'ProfileController@editProfile')->name('editprofile');
+
 
 // Social Auth
 Route::get('auth/social', 'Auth\SocialAuthController@show')->name('social.login');
