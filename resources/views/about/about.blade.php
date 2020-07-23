@@ -37,13 +37,11 @@
                                 <img class="rounded img-fluid" src="/images/about.jpg" alt="Card image cap">
                             </div>
                             <div class="col-lg-6 col-md-6 pl-5 pr-5">
-                                <h2 class="mb-5">The leading global marketplace for learning and instruction
+                                <h2 class="mb-5">The leading global marketplace for learning and instructions.
                                 </h2>
                                 <h5 class="mt-2">Our Vision</h5>
-                                <p>It is a long established fact that a reader will be distracted by the readable
-                                    content of a page when looking at its layout. The point of using Lorem Ipsum is that
-                                    it has a more-or-less normal distribution of letters, as opposed to using 'Content
-                                    here,</p>
+                                <p>SKILLPARK INC. is a incorporated company which is legally acceptable nationwide. The application is a Nepal National Payment Gateway Verified website. Trusted by the Government of Nepal. © Skillpark Inc.
+                                    </p>
                                 <h5 class="mt-4">Our Goal</h5>
                                 <p>When looking at its layout. The point of using Lorem Ipsum is that it has a
                                     more-or-less normal distribution of letters, as opposed to using 'Content here,</p>

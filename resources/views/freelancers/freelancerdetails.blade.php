@@ -8,7 +8,7 @@
         <div class="row">
             <div class="col-md-8">
                 <div class="main-heading bids_heading">
-                    <h2>Update Freelancer Profile</h2>
+                    <h2>Complete your Freelancer Profile</h2>
                     <div class="line-shape1">
                         <img src="/images/line.svg" alt="">
                     </div>
@@ -17,13 +17,10 @@
                     <form>
                         <div class="row">
                             <div class="col-lg-12">
-                                <div class="job-center-dt">
-                                    <img src="/{{ Auth:: user()->avatar }}" alt="">
-                                </div>
                                 <div class="form-group">
-                                    <label class="label15">Profile Avtar*</label>
+                                    <label class="label15">Profile Avatar*</label>
                                     <div class="avtar_dp">
-                                        <img src="images/profile_dp.jpg" alt="">
+                                        <img src="/{{ Auth:: user()->avatar }}" alt="">
                                     </div>
                                     <div class="image-upload-wrap1 ml5">
                                         <input class="file-upload-input1" id="file3" type="file" onchange="readURL(this);" accept="image/*">
@@ -86,7 +83,7 @@
                                     <div class="ui fluid multiple search selection dropdown skills-search">
                                         <input name="tags" type="hidden" value="">
                                         <i class="dropdown icon"></i>
-                                        <input class="search" autocomplete="off" tabindex="0"><span class="sizer" style=""></span>
+                                        <input class="search" autocomplete="off" tabindex="0"><span class="sizer"></span>
                                         <div class="default text">Skills</div>
                                         <div class="menu transition hidden" tabindex="-1">
                                             <div class="item selected" data-value="angular">Angular</div>

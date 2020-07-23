@@ -29,8 +29,8 @@ Route::get('/termsofservice', function () {
 Auth::routes(['verify' => true]);
 //registration
 //select-profile
-Route::get('register/select-profile', 'Auth\ProfileInfoController@showProfile');
-Route::post('register/select-profile', 'Auth\ProfileInfoController@addProfile')->name('addprofile');
+Route::get('select-profile', 'Auth\ProfileInfoController@showProfile');
+Route::post('select-profile', 'Auth\ProfileInfoController@addProfile')->name('addprofile');
 //add details
 //freelancer
 Route::get('fp/user-details', 'ProfileDetailsController@freelancerProfileDetails');
