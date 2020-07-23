@@ -20,6 +20,10 @@ Route::get('/contactus', function () {
     return view('about.contact');
 });
 
+Route::get('/termsofservice', function () {
+    return view('about.terms');
+});
+
 // |=================LOGGED IN USER==========================|
 
 Auth::routes(['verify' => true]);
