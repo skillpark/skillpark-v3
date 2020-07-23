@@ -37,7 +37,7 @@ class SocialAuthController extends Controller
      */
     public function show()
     {
-        return view('freelancers.home');
+        return view('auth.addinfo');
     }
 
     /**
@@ -87,7 +87,7 @@ class SocialAuthController extends Controller
      */
     protected function sendSuccessResponse()
     {
-        return redirect()->intended('/register/select-profile');
+        return redirect()->intended('/select-profile');
     }
 
     /**
@@ -98,7 +98,7 @@ class SocialAuthController extends Controller
      */
     protected function sendFailedResponse($msg = null)
     {
-        return redirect()->route('social.login')
+        return redirect()->route('login')
             ->withErrors(['msg' => $msg ?: 'Unable to login, try with another provider to login.']);
     }
 

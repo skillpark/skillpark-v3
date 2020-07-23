@@ -147,11 +147,11 @@
                                             <a class="link-item" href="#">Digital Marketing</a>
                                             <a class="link-item" href="#">Writing &amp; Translation</a>
                                             <a class="link-item" href="#">Video &amp; Animation</a>
+                                            <a class="link-item" href="#">Lifestyle</a>
+                                            <a class="link-item" href="#">Sitemap</a>
                                             <a class="link-item" href="#">Music &amp; Audio</a>
                                             <a class="link-item" href="#">Programming &amp; Tech</a>
                                             <a class="link-item" href="#">Business</a>
-                                            <a class="link-item" href="#">Lifestyle</a>
-                                            <a class="link-item" href="#">Sitemap</a>
                                         </div>
                                     </li>
                                 </ul>
@@ -187,13 +187,14 @@
                         <div class="subcribes">
                             <div class="text-step1">
                                 <div class="btext-heading mt-2" style="color:#acacac; font-size:14px;">
-                                    <i class="fas fa-check-circle"></i>All Rights Reserved &reg; Sushant Poudel, Nitika Bhatta and Divesh Thapa.
+                                    <i class="fas fa-check-circle"></i>All Rights Reserved &reg; Sushant Poudel, Nitika
+                                    Bhatta and Divesh Thapa.
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-5 col-md-6">
-                        <a class="order-1 order-lg-0 ml-lg-0 ml-3 mr-auto" style="float: right;margin-top:.5rem" href="index.html"><img src="images/logo.svg" alt=""></a>
+                        <a class="order-1 order-lg-0 ml-lg-0 ml-3 mr-auto" style="float: right;margin-top:.5rem" href="index.html"><img src="/images/logo.svg" alt=""></a>
 
                     </div>
                 </div>
@@ -209,7 +210,7 @@
                             of Nepal. &copy; Skillpark Inc.</p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-3">
+                <div class="col-lg-3 col-xl-2">
                     <div class="footer-links">
                         <h4>About</h4>
                         <ul class="list">
@@ -223,24 +224,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-3">
-                    <div class="footer-links">
-                        <h4>For Companies</h4>
-                        <ul class="list">
-                            <li><a href="#">Events</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Forum</a></li>
-                            <li><a href="#">Community Standards</a></li>
-                            <li><a href="#">Podcast</a></li>
-                            <li><a href="#">Affiliates</a></li>
-                            <li><a href="#">Invite a Friend</a></li>
-                            <li><a href="#">Become a Seller</a></li>
-                            <li><a href="#">Skillpark Elevate</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3">
+                <div class="col-lg-3 col-xl-2">
                     <div class="footer-links">
                         <h4>Support</h4>
                         <ul class="list">
@@ -252,9 +236,36 @@
                             <li><a href="#">Buying on Skillpark
                                 </a>
                             </li>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-xl-2">
+                    <div class="footer-links">
+                        <h4>Categories</h4>
+                        <ul class="list">
+                            <li><a href="#">Graphics &amp; Design</a></li>
+                            <li><a href="#">Digital Marketing</a></li>
+                            <li><a href="#">Writing &amp; Translation</a></li>
+                            <li><a href="#">Video &amp; Animation</a></li>
+                            <li><a href="#">Lifestyle</a></li>
+                            <li><a href="#">Sitemap</a></li>
+                            <li><a href="#">Music &amp; Audio</a></li>
+                            <li><a href="#">Programming &amp; Tech</a></li>
+                            <li><a href="#">Business</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-xl-2">
+                    <div class="footer-links">
+                        <h4>Community</h4>
+                        <ul class="list">
+                            <li><a href="#">Events</a></li>
                             <li><a href="#">Blog</a></li>
                             <li><a href="#">Forum</a></li>
                             <li><a href="#">Community Standards</a></li>
+                            <li><a href="#">Invite a Friend</a></li>
+                            <li><a href="#">Become a Seller</a></li>
+                            <li><a href="#">Skillpark Elevate</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -265,7 +276,8 @@
                 <div class="row">
                     <div class="col-lg-6 col-md-6">
                         <div class="copyright">
-                            <i class="far fa-copyright"></i>Copyright 2020 <a href="{{ url('/') }}">Skillpark Inc.</a>.
+                            <a class="order-1 order-lg-0 ml-lg-0 ml-3 mr-auto" href="{{ url('/') }}"><img src="images/logo.svg" alt=""></a>
+                            Copyright 2020 <i class="far fa-copyright"></i><a href="{{ url('/') }}">Skillpark Inc.</a>.
                             All Right Reserved.
                         </div>
                     </div>
