@@ -8,7 +8,7 @@
         <div class="row">
             <div class="col-md-8">
                 <div class="main-heading bids_heading">
-                    <h2>Update Your Profile</h2>
+                    <h2>Complete Your Profile</h2>
                     <div class="line-shape1">
                         <img src="/images/line.svg" alt="">
                     </div>
@@ -17,13 +17,10 @@
                     <form>
                         <div class="row">
                             <div class="col-lg-12">
-                                <div class="job-center-dt">
-                                    <img src="/{{ Auth:: user()->avatar }}" alt="">
-                                </div>
                                 <div class="form-group">
                                     <label class="label15">Profile Avtar</label>
                                     <div class="avtar_dp">
-                                        <img src="images/profile_dp.jpg" alt="">
+                                        <img src="/{{ Auth:: user()->avatar }}" alt="">
                                     </div>
                                     <div class="image-upload-wrap1 ml5">
                                         <input class="file-upload-input1" id="file3" type="file" onchange="readURL(this);" accept="image/*">
@@ -36,7 +33,7 @@
                             <div class="col-lg-12">
                                 <div class="form-group">
                                     <label class="label15">Company Name*</label>
-                                    <input type="text" class="job-input" placeholder="Your Company Name">
+                                    <input type="text" class="job-input" placeholder="Enter Name">
                                 </div>
                             </div>
                             <div class="col-lg-6">
@@ -55,12 +52,6 @@
                                 <div class="form-group">
                                     <label class="label15">About Description*</label>
                                     <div class="description_dtu">
-                                        <div class="description_actions">
-                                            <a href="#"><i class="fas fa-bold"></i></a>
-                                            <a href="#"><i class="fas fa-italic"></i></a>
-                                            <a href="#"><i class="fas fa-list-ul"></i></a>
-                                            <a href="#"><i class="fas fa-list-ol"></i></a>
-                                        </div>
                                         <textarea class="textarea70" placeholder="Describe your experience, skills, etc. In complete details. This is your chance to show off."></textarea>
                                     </div>
                                 </div>
@@ -69,15 +60,6 @@
                                 <div class="form-group">
                                     <label class="label15">Tagline*</label>
                                     <input type="email" class="job-input" placeholder="Wordpress Developer">
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label class="label15">Pay Rate (Rs/hr)*</label>
-                                    <div class="smm_input">
-                                        <input type="text" class="job-input" placeholder="Enter Your Page Rate">
-                                        <div class="mix_max">npr</div>
-                                    </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">

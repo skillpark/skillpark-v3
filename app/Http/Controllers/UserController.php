@@ -31,9 +31,6 @@ class UserController extends Controller
         ]);
 
         $imagePath = request('image')->store('images/uploads','public');
-        
-
-        dd(request()->all());
     }
 
     /**

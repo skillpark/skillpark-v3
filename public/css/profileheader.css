@@ -317,22 +317,7 @@
 
 
 
- @media (min-width: 576px) {
-     .dropdown-notifications {
-         position: relative;
-    }
-     .dropdown-notifications .dropdown-menu {
-         width: auto;
-         min-width: 18.75rem;
-         right: 0;
-    }
-     .dropdown-notifications .dropdown-menu .dropdown-notifications-item .dropdown-notifications-item-content .dropdown-notifications-item-content-text {
-         max-width: 13rem;
-    }
-}
-/* End Header CSS */
-
-/* responsive design */
+ /* responsive design */
  @media(max-width:1024px) {
      .sidenav, .submenu, .search a.green-btn, .third-menu, .main-page .breadcrumb {
          display: none;

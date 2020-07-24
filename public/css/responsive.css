@@ -731,7 +731,7 @@
 
 @media (min-width: 1200px) {
     .container {
-        max-width: 1170px !important;
+        max-width: 1170px ;
     }
     .modal-jb {
         max-width: 570px !important;

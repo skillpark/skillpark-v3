@@ -48,7 +48,7 @@ $('.bnnr-owl').owlCarousel({
     margin: 0,
     nav: true,
     dots: false,
-    navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"],
+    navText: ["<i class='fa fa-arrow-left'></i>", "<i class='fa fa-arrow-right'></i>"],
     autoplay: true,
     autoplayTimeout: 3000,
     autoplayHoverPause: true,
@@ -71,7 +71,7 @@ $('.jobs-owl').owlCarousel({
     margin: 30,
     nav: true,
     dots: false,
-    navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"],
+    navText: ["<i class='fa fa-arrow-left'></i>", "<i class='fa fa-arrow-right'></i>"],
     responsive: {
         0: {
             items: 1

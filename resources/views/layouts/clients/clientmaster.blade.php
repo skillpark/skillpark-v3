@@ -12,29 +12,28 @@
     <link rel="icon" type="image/png" href="/images/fav-miver.svg">
 
     <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="/vendor/semantic/semantic.min.css">
     <link href="/css/responsive.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
-    <link href="/css/profileheader.css" rel="stylesheet">
+    <link href="/css/mover.css" rel="stylesheet">
+
     <link href="/css/datepicker.min.css" rel="stylesheet">
-    <link href="/css/jquery.range.css" rel="stylesheet">
+
     <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
     <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
     <link href="/vendor/OwlCarousel/assets/owl.carousel.css" rel="stylesheet">
     <link href="/vendor/OwlCarousel/assets/owl.theme.default.min.css" rel="stylesheet">
-
-    <!-- Semantic Css -->
-    <link rel="stylesheet" type="text/css" href="vendor/semantic/semantic.min.css">
-
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light topbar static-top shadow-sm bg-white osahan-nav-top px-0" style="padding: 7px !important;font-size:13px">
         <div class="container">
             <!-- Sidebar Toggle (Topbar) -->
-            <a class="navbar-brand" href="index.html"><img src="/images/logo.svg" alt=""></a>
+            <a class="navbar-brand" href=""><img src="/images/logo.svg" alt=""></a>
             <!-- Topbar Search -->
             <form class="d-none d-sm-inline-block form-inline mr-auto my-2 my-md-0 mw-200 navbar-search">
-                <div class="input-group">
+                <div class="input-group" style="width: 300px;">
                     <input type="text" class="form-control bg-white small" placeholder="Find Services..." aria-label="Search" aria-describedby="basic-addon2" style="font-size: 13px;">
                     <div class="input-group-append">
                         <button class="btn btn-success" type="button" style="font-size: 13px;">
@@ -64,52 +63,11 @@
                     </div>
                 </li>
 
-                <li class="nav-item dropdown no-arrow no-caret mr-3 dropdown-notifications">
-                    <a class="btn btn-icon btn-transparent-dark dropdown-toggle" id="navbarDropdownMessages" href="javascript:void(0);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
-                            </path>
-                            <polyline points="22,6 12,13 2,6"></polyline>
-                        </svg>
+                <li class="nav-item no-arrow no-caret">
+                    <a class="btn btn-icon btn-transparent-dark dropdown-toggle" href="javascript:void(0);">
+                        <i class="fas fa-envelope fa-m pt-2 mt-1"></i>
                     </a>
-                    <div class="dropdown-menu dropdown-menu-right border-0 shadow animated--fade-in-up" aria-labelledby="navbarDropdownMessages">
-                        <h6 class="dropdown-header dropdown-notifications-header">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail mr-2">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
-                                </path>
-                                <polyline points="22,6 12,13 2,6"></polyline>
-                            </svg>
-                            Message Center
-                        </h6>
-                        <a class="dropdown-item dropdown-notifications-item" href="#!">
-                            <img class="dropdown-notifications-item-img" src="/{{ Auth::user()->avatar }}">
-                            <div class="dropdown-notifications-item-content">
-                                <div class="dropdown-notifications-item-content-text">Lorem ipsum dolor sit amet,
-                                    consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                                    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-                                    laborum.</div>
-                                <div class="dropdown-notifications-item-content-details">Emily Fowler · 58m</div>
-                            </div>
-                        </a>
-                        <a class="dropdown-item dropdown-notifications-item" href="#!">
-                            <img class="dropdown-notifications-item-img" src="/{{ Auth::user()->avatar }}">
-                            <div class="dropdown-notifications-item-content">
-                                <div class="dropdown-notifications-item-content-text">Lorem ipsum dolor sit amet,
-                                    consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                                    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-                                    laborum.</div>
-                                <div class="dropdown-notifications-item-content-details">Diane Chambers · 2d</div>
-                            </div>
-                        </a>
-                        <a class="dropdown-item dropdown-notifications-footer" href="messages.html">Read All
-                            Messages</a>
-                    </div>
+
                 </li>
                 <li class="nav-item dropdown no-arrow no-caret dropdown-user">
                     <a class="btn btn-icon btn-transparent-dark dropdown-toggle" id="navbarDropdownUserImage" href="javascript:void(0);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="img-fluid" src="/{{ Auth::user()->avatar }}"></a>
@@ -132,7 +90,8 @@
                             </div>
                             Account
                         </a>
-                        <a class="dropdown-item" href="#">
+                        <a class="dropdown-item" href="#" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
                             <div class="dropdown-item-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-log-out">
                                     <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
@@ -142,6 +101,9 @@
                             </div>
                             Logout
                         </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
                     </div>
                 </li>
             </ul>
@@ -156,53 +118,31 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Home
+                        <a class="nav-link" href="#">
+                            Dashboard
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownPortfolio">
-                            <a class="dropdown-item" href="index.html">Home 1</a>
-                            <a class="dropdown-item" href="index2.html">Home 2</a>
-                            <a class="dropdown-item" href="index3.html">Home 3</a>
-                        </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
+                        <a class="nav-link" href="">Browse Freelancers</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" href="">Categories</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Pages
+                        <a class="nav-link" href="#">
+                            My Projects
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownPortfolio">
-                            <a class="dropdown-item" href="product.html">Product List</a>
-                            <a class="dropdown-item" href="product2.html">Product List 2</a>
-                            <a class="dropdown-item" href="product-detail.html">List Detail</a>
-                            <a class="dropdown-item" href="profile.html">Profile</a>
-                            <a class="dropdown-item" href="company-profile.html">Company Profile</a>
-                            <a class="dropdown-item" href="alerts.html">Alerts</a>
-                            <a class="dropdown-item" href="messages.html">Messages</a>
-                        </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Other Pages
+                        <a class="nav-link" href="#">
+                            Messages
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownBlog">
-                            <a class="dropdown-item" href="login.html">Login</a>
-                            <a class="dropdown-item" href="register.html">Register</a>
-                            <a class="dropdown-item" href="forgot-password.html">Forgot Password</a>
-                            <a class="dropdown-item" href="faq.html">FAQ</a>
-                            <a class="dropdown-item" href="404.html">404 Page</a>
-                            <a class="dropdown-item" href="blank.html">Blank Page</a>
-                        </div>
                     </li>
                 </ul>
             </div>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="become-a-seller.html">
+                    <a class="nav-link" href="become-a-s">
                         <i class="fa fa-fw fa-trophy"></i>
                         <span>Become A Seller</span></a>
                 </li>
@@ -336,7 +276,6 @@
     <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="/vendor/OwlCarousel/owl.carousel.js"></script>
     <script src="/vendor/semantic/semantic.min.js"></script>
-    <script src="/js/jquery.range-min.js"></script>
     <script src="/js/custom1.js"></script>
 
 </body>

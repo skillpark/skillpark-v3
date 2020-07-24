@@ -87,7 +87,7 @@
         }
     </style>
     <header>
-        <div class="top-header">
+        <div class="top-header bg-transparent">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12">
@@ -135,9 +135,6 @@
                                                 <i class="fas fa-sort-down"></i>
                                             </a>
                                             <div class="dropdown-menu account-dropdown dropdown-menu-right">
-                                                <a class="link-item" href="my_freelancer_dashboard.html">Dashboard</a>
-                                                <a class="link-item" href="my_freelancer_setting.html">Setting</a>
-                                                <a class="link-item" href="my_freelancer_messages.html">Messages</a>
                                                 <a class="link-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                                     Logout</a>

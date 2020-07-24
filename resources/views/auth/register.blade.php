@@ -6,11 +6,11 @@
 </script>
 
 <!-- Register -->
-<main class="browse-section" style="padding: 20px;">
+<main class="browse-section py-3">
     <div class="container">
         <div class="row justify-content-center align-items-center d-flex vh-100">
             <div class="col-lg-4 mx-auto">
-                <div class="osahan-login py-4" style="font-size: 13px !important;">
+                <div class="osahan-login" style="font-size: 13px !important;">
                     <div class="text-center mb-4">
                         <a href="{{ url('/') }}"><img src="images/fav-miver.svg" style="width: 50px;" alt=""></a>
                         <h5 class="font-weight-bold mt-3" style="font-size: 1.25rem;">Join Skillpark</h5>

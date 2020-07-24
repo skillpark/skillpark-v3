@@ -23,10 +23,10 @@
     <!-- Begin Page Content -->
     <section class="py-5 homepage-search-block position-relative" style="background-color: #f0f2f5;">
         <div class="container">
-            <div class="row py-lg-5">
-                <div class="col-lg-7">
+            <div class="row py-lg-4">
+                <div class="col-lg-6 mx-auto">
                     <div class="homepage-search-title">
-                        <h1 class="mb-3 text-shadow text-gray-900 font-weight-bold">Find The Perfect Freelance Services
+                        <h1 class="mb-3 text-shadow text-gray-900 font-weight-bold" style="font-size: 2rem;">Find The Perfect Freelance Services
                             For
                             Your Business</h1>
                         <h5 class="mb-5 text-shadow text-gray-800 font-weight-normal">Hire Expert Freelancers for Your
@@ -40,7 +40,7 @@
                                     <input type="text" placeholder="Find Services..." class="form-control border-0 form-control-lg shadow-sm">
                                 </div>
                                 <div class="col-lg-2 col-md-2 col-sm-12 form-group">
-                                    <button type="submit" class="btn btn-success btn-block btn-lg btn-gradient shadow-sm"><i class="fa fa-search"></i></button>
+                                    <button type="submit" class="btn btn-success btn-block btn-lg btn-gradient shadow-sm">Search</button>
                                 </div>
                             </div>
                         </form>
@@ -209,8 +209,8 @@
             </div>
         </div>
     </div>
+    
     <!-- get started -->
-
     <div class="all-categories">
         <div class="container">
             <div class="row">

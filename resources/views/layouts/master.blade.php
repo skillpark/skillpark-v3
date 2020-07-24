@@ -56,7 +56,8 @@
                                     <li>
                                         <div class="lang-icon dropdown">
                                             <i class="fas fa-globe ln-glb"></i>
-                                            <a href="#" class="icon15 dropdown-toggle-no-caret" role="button" data-toggle="dropdown">
+                                            <a href="#" class="icon15 dropdown-toggle-no-caret" role="button"
+                                                data-toggle="dropdown">
                                                 EN <i class="fas fa-caret-down p-crt"></i>
                                             </a>
                                             <div class="dropdown-menu lanuage-dropdown dropdown-menu-left">
@@ -72,21 +73,24 @@
                                     <li>
                                         <div class="account order-1 dropdown">
                                             @guest
-                                            <a href="#" class="account-link dropdown-toggle-no-caret" role="button" data-toggle="dropdown">
+                                            <a href="#" class="account-link dropdown-toggle-no-caret" role="button"
+                                                data-toggle="dropdown">
                                                 <span style="color:#847577;font-size:12px">Learn More</span>
                                                 <i style="color:#847577;font-size:12px" class="fas fa-sort-down"></i>
                                             </a>
                                             <div class="dropdown-menu account-dropdown dropdown-menu-right">
-                                                <a class="link-item" href="my_freelancer_dashboard.html">Terms and
+                                                <a class="link-item" href="{{ url('terms') }}">Terms and
                                                     Condition</a>
-                                                <a class="link-item" href="my_freelancer_setting.html">Privacy
+                                                <a class="link-item" href="{{ url('privacy') }}">Privacy
                                                     Policy</a>
                                                 <a class="link-item" href="{{ url('creators') }}">Creators /
                                                     Founders</a>
                                             </div>
                                             @else
-                                            <a href="#" class="account-link dropdown-toggle-no-caret" role="button" data-toggle="dropdown">
-                                                <div class="user-dp"><img src="{{ Auth::user()->avatar }}" alt="{{ Auth::user()->name }}"></div>
+                                            <a href="#" class="account-link dropdown-toggle-no-caret" role="button"
+                                                data-toggle="dropdown">
+                                                <div class="user-dp"><img src="{{ Auth::user()->avatar }}"
+                                                        alt="{{ Auth::user()->name }}"></div>
                                                 <span>Hi! {{ Auth::user()->name }}</span>
                                                 <i class="fas fa-sort-down"></i>
                                             </a>
@@ -97,7 +101,8 @@
                                                 <a class="link-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                                     Logout</a>
-                                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                                    style="display: none;">
                                                     @csrf
                                                 </form>
                                             </div>
@@ -116,14 +121,17 @@
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12">
                         <nav class="navbar navbar-expand-lg navbar-light bg-dark1 justify-content-sm-start">
-                            <a class="order-1 order-lg-0 ml-lg-0 ml-3 mr-auto" href="{{ url('/') }}"><img src="images/logo.svg" alt=""></a>
+                            <a class="order-1 order-lg-0 ml-lg-0 ml-3 mr-auto" href="{{ url('/') }}"><img
+                                    src="images/logo.svg" alt=""></a>
                             <button class="navbar-toggler align-self-start" type="button">
                                 <i class="fas fa-bars"></i>
                             </button>
-                            <div class="collapse navbar-collapse d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end bg-dark1 p-3 p-lg-0 mt1-5 mt-lg-0 mobileMenu" id="navbarSupportedContent">
+                            <div class="collapse navbar-collapse d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end bg-dark1 p-3 p-lg-0 mt1-5 mt-lg-0 mobileMenu"
+                                id="navbarSupportedContent">
                                 <ul class="navbar-nav align-self-stretch">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="{{ url('how-it-works') }}">About <span class="sr-only">(current)</span></a>
+                                        <a class="nav-link" href="{{ url('how-it-works') }}">About <span
+                                                class="sr-only">(current)</span></a>
                                     </li>
                                     <li class="nav-item dropdown">
                                         <a class="nav-link" href="{{ url('/') }}">Solutions</a>
@@ -132,14 +140,16 @@
                                         <a class="nav-link" href="{{ url('/') }}">Enterprise</a>
                                     </li>
                                     <li class="nav-item dropdown">
-                                        <a href="#" class="nav-link dropdown-toggle-no-caret" role="button" data-toggle="dropdown">Explore</a>
+                                        <a href="#" class="nav-link dropdown-toggle-no-caret" role="button"
+                                            data-toggle="dropdown">Explore</a>
                                         <div class="dropdown-menu pages-dropdown">
                                             <a class="link-item" href="{{ url('/') }}">Companies</a>
                                             <a class="link-item" href="{{ url('/') }}">Freelancers</a>
                                         </div>
                                     </li>
                                     <li class="nav-item dropdown pages152">
-                                        <a href="#" class="nav-link dropdown-toggle-no-caret" role="button" data-toggle="dropdown">
+                                        <a href="#" class="nav-link dropdown-toggle-no-caret" role="button"
+                                            data-toggle="dropdown">
                                             Categories <i class="fas fa-caret-down p-crt"></i>
                                         </a>
                                         <div class="dropdown-menu pages-dropdown">
@@ -155,12 +165,14 @@
                                         </div>
                                     </li>
                                 </ul>
-                                <a href="#" class="search-link" role="button" data-toggle="modal" data-target="#searchModal"><i class="fas fa-search"></i></a>
+                                <a href="#" class="search-link" role="button" data-toggle="modal"
+                                    data-target="#searchModal"><i class="fas fa-search"></i></a>
                                 @guest
                                 <a href="{{ route('login') }}" class="add-post">Login</a>
                                 <a href="{{ route('register') }}" class="add-project">Signup</a>
                                 @else
-                                <a href="{{ route('home') }}" style="border: 2px solid #1dc8cc" class="add-post">Dashboard</a>
+                                <a href="{{ route('home') }}" style="border: 2px solid #1dc8cc"
+                                    class="add-post">Dashboard</a>
                                 @endguest
                             </div>
                             <div class="responsive-search order-1">
@@ -193,10 +205,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-5 col-md-6">
-                        <a class="order-1 order-lg-0 ml-lg-0 ml-3 mr-auto" style="float: right;margin-top:.5rem" href="index.html"><img src="/images/logo.svg" alt=""></a>
-
-                    </div>
                 </div>
             </div>
         </div>
@@ -204,7 +212,7 @@
             <div class="row">
                 <div class="col-lg-3 col-md-3">
                     <div class="about-jobby">
-                        <a href="index.html"><img src="images/profilelogo.png" width="30" alt=""></a>
+                        <a href=""><img src="/images/logo.svg" alt=""></a>
                         <p>SKILLPARK INC. is a incorporated company which is legally acceptable nationwide. The
                             application is a Nepal National Payment Gateway Verified website. Trusted by the Government
                             of Nepal. &copy; Skillpark Inc.</p>
@@ -276,7 +284,8 @@
                 <div class="row">
                     <div class="col-lg-6 col-md-6">
                         <div class="copyright">
-                            <a class="order-1 order-lg-0 ml-lg-0 ml-3 mr-auto" href="{{ url('/') }}"><img src="images/logo.svg" alt=""></a>
+                            <a class="order-1 order-lg-0 ml-lg-0 ml-3 mr-auto" href="{{ url('/') }}"><img
+                                    src="/images/logo.svg" alt=""></a>
                             Copyright 2020 <i class="far fa-copyright"></i><a href="{{ url('/') }}">Skillpark Inc.</a>.
                             All Right Reserved.
                         </div>

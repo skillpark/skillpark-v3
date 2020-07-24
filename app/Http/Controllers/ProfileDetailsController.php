@@ -20,20 +20,6 @@ class ProfileDetailsController extends Controller
         ]);
     }
 
-    /**
-     * Get a validator for an incoming registration request.
-     *
-     * @param  array  $data
-     * @return \Illuminate\Contracts\Validation\Validator
-     */
-    protected function validator(array $data)
-    {
-        return Validator::make($data, [
-            'about' => ['required', 'string', 'min:50', 'max:255'],
-            'city_id' => ['required'],
-        ]);
-    }
-
     public function freelancerProfileDetails()
     {
         $cities = City::all();
@@ -51,12 +37,13 @@ class ProfileDetailsController extends Controller
     public function clientProfileDetails()
     {
         $cities = City::all();
-        return view('clients.clientdetails', compact('cities'));
+        return view('clients.home', compact('cities'));
     }
 
     public function addclientProfileDetails()
     {
         $cities = City::all();
         return view('clients.clientdetails', compact('cities'));
+        return view('clients.home', compact('cities'));
     }
 }
