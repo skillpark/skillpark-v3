@@ -12,18 +12,20 @@
     <link rel="icon" type="image/png" href="/images/fav-miver.svg">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" type="text/css" href="/vendor/semantic/semantic.min.css">
+    <!-- Semantic Css -->
     <link href="/css/responsive.css" rel="stylesheet">
-    <link href="/css/style.css" rel="stylesheet">
-    <link href="/css/mover.css" rel="stylesheet">
-
     <link href="/css/datepicker.min.css" rel="stylesheet">
-
+    <link href="/css/jquery.range.css" rel="stylesheet">
     <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
     <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/profileheader.css" rel="stylesheet">
     <link href="/vendor/OwlCarousel/assets/owl.carousel.css" rel="stylesheet">
     <link href="/vendor/OwlCarousel/assets/owl.theme.default.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/vendor/semantic/semantic.min.css">
+
+
 </head>
 
 <body>
@@ -51,7 +53,7 @@
                     <!-- Dropdown - Messages -->
                     <div class="dropdown-menu dropdown-menu-right p-3 shadow-sm animated--grow-in" aria-labelledby="searchDropdown">
                         <form class="form-inline mr-auto w-100 navbar-search">
-                            <div class="input-group">
+                            <div class="input-group" style="width: 350px;">
                                 <input type="text" class="form-control bg-light border-0 small" placeholder="Find Services..." aria-label="Search" aria-describedby="basic-addon2">
                                 <div class="input-group-append">
                                     <button class="btn btn-primary" type="button">
@@ -119,18 +121,18 @@
                 <ul class="navbar-nav">
                     <li class="nav-item dropdown">
                         <a class="nav-link" href="#">
-                            Dashboard
+                            Profile
                         </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">Browse Freelancers</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="">Categories</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Trending</a>
+                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link" href="#">
-                            My Projects
+                            Saved Jobs
                         </a>
                     </li>
                     <li class="nav-item dropdown">
@@ -174,7 +176,7 @@
                         </div>
                     </div>
                     <div class="col-lg-5 col-md-6">
-                        <a class="order-1 order-lg-0 ml-lg-0 ml-3 mr-auto" style="float: right;margin-top:.5rem" href="index.html"><img src="/images/logo.svg" alt=""></a>
+                        <a class="order-1 order-lg-0 ml-lg-0 ml-3 mr-auto" style="float: right;margin-top:.5rem" href=""><img src="/images/logo.svg" alt=""></a>
 
                     </div>
                 </div>
@@ -184,7 +186,7 @@
             <div class="row">
                 <div class="col-lg-3 col-md-3">
                     <div class="about-jobby">
-                        <a href="index.html"><img src="images/profilelogo.png" width="30" alt=""></a>
+                        <a href=""><img src="images/profilelogo.png" width="30" alt=""></a>
                         <p>SKILLPARK INC. is a incorporated company which is legally acceptable nationwide. The
                             application is a Nepal National Payment Gateway Verified website. Trusted by the Government
                             of Nepal. &copy; Skillpark Inc.</p>
@@ -274,6 +276,7 @@
     <script src="/js/datepicker.min.js"></script>
     <script src="/js/i18n/datepicker.en.js"></script>
     <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/jquery.range-min.js"></script>
     <script src="/vendor/OwlCarousel/owl.carousel.js"></script>
     <script src="/vendor/semantic/semantic.min.js"></script>
     <script src="/js/custom1.js"></script>

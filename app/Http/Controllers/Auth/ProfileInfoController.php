@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\City;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -19,8 +20,10 @@ class ProfileInfoController extends Controller
 
     public function showProfile()
     {
-        return view('auth.addinfo');   
+        $cities = City::all();
+        return view('auth.register-info', compact('cities')); 
     }
+
 
     public function addProfile(Request $request)
     {
@@ -30,10 +33,10 @@ class ProfileInfoController extends Controller
         $user->roles()->detach();
         $user->roles()->attach($role_id);
 
-        if (Auth::user()->roles() == 'freelancer') {
-            return (redirect()-> route('freelancerdetails'));
+        if (Auth::user()->usertype == 'client') {
+            return redirect()-> route('client');
         } else {
-            return (redirect()-> route('clientdetails'));
+            return redirect()-> route('freelancer');
         }
     }
 }

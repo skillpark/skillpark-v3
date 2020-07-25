@@ -6,10 +6,13 @@
 </script>
 
 <!-- Register -->
-<main class="browse-section py-3">
+<main class="browse-section">
     <div class="container">
-        <div class="row justify-content-center align-items-center d-flex vh-100">
-            <div class="col-lg-4 mx-auto">
+        <div class="row  ">
+            <div class="col-xl-7 justify-content-center align-items-center d-flex vh100">
+                <img src="/images/svg/ipad.svg" class="banner" style="width:500px">
+            </div>
+            <div class="col-xl-4 col-lg-12 col-sm-12 justify-content-center align-items-center">
                 <div class="osahan-login" style="font-size: 13px !important;">
                     <div class="text-center mb-4">
                         <a href="{{ url('/') }}"><img src="images/fav-miver.svg" style="width: 50px;" alt=""></a>
@@ -19,7 +22,7 @@
                     </div>
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
-                        <div class="form-row">
+                        <!-- <div class="form-row">
                             <div class="col">
                                 <div class="form-group">
                                     <label class="mb-1">Name</label>
@@ -34,7 +37,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="form-group">
                             <label class="mb-1">Email</label>
                             <div class="position-relative icon-form-control">
@@ -88,7 +91,7 @@
                         </div>
                         <div class="py-3 d-flex align-item-center">
                             <a href="{{ route('password.update') }}">Forgot password?</a>
-                            <span class="ml-auto"> Already on Miver? <a href="{{ route('login') }}">Sign in</a></span>
+                            <span class="ml-auto"> Already on Skillpark? <a href="{{ route('login') }}">Sign in</a></span>
                         </div>
                     </form>
                 </div>

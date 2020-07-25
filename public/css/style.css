@@ -1762,7 +1762,7 @@ span.right-cm {
 }
 
 .jobs-owl .owl-nav .owl-prev {
-    left: -60px;
+    left: -20px;
     font-size: 12px !important;
     position: absolute;
     top: 45%;
@@ -1780,7 +1780,7 @@ span.right-cm {
 .jobs-owl .owl-nav .owl-next {
     font-size: 12px !important;
     position: absolute;
-    right: -60px;
+    right: -20px;
     top: 45%;
     padding: 6px 0 !important;
     text-align: center;

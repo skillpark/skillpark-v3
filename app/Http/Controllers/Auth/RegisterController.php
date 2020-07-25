@@ -30,7 +30,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/select-profile';
+    protected $redirectTo = '/register/user-information';
 
 
     /**
@@ -52,7 +52,7 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
+            // 'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8'],
         ]);
@@ -67,16 +67,10 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
        $user= User::create([
-            'name' => $data['name'],
+            // 'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
-  
-        // $role_id = $data['role_id'];
-        // if (!in_array($role_id, [2, 3])) {
-        //     $role_id = 2;
-        // }
-        // $user->roles()->attach($role_id);
 
         $user->sendEmailVerificationNotification();
 

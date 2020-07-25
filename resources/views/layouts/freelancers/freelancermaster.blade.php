@@ -21,7 +21,6 @@
     <link rel="stylesheet" href="/css/main.css">
     <link href="/css/style.css" rel="stylesheet">
     <link href="/css/profileheader.css" rel="stylesheet">
-    <link href="/css/profileheader.css" rel="stylesheet">
     <link href="/vendor/OwlCarousel/assets/owl.carousel.css" rel="stylesheet">
     <link href="/vendor/OwlCarousel/assets/owl.theme.default.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/vendor/semantic/semantic.min.css">

@@ -238,7 +238,7 @@
                                 interdum velit posuere quis.<p>
                         </div>
                         <div class="btns15" style="text-align: center;">
-                            <button class="btn-152" onclick="window.location.href = 'post_a_job.html';">Post a
+                            <button class="btn-152" onclick="window.location.href = '';">Post a
                                 Job</button>
                             <button class="btn-153" onclick="window.location.href = '#';">Learn More</button>
                         </div>
@@ -268,7 +268,7 @@
                                 interdum velit posuere quis.<p>
                         </div>
                         <div class="btns15" style="text-align: center;">
-                            <button class="btn-152" onclick="window.location.href = 'browse_freelancers.html';">Get
+                            <button class="btn-152" onclick="window.location.href = '';">Get
                                 Listed</button>
                             <button class="btn-153" onclick="window.location.href = '#';">Learn More</button>
                         </div>

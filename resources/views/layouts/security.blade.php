@@ -43,6 +43,10 @@
             padding: 5px 5px 0 5px !important;
         }
 
+        .browse-section {
+            padding-top: 20px;
+        }
+
         a {
             color: inherit;
         }
@@ -82,77 +86,18 @@
             background-color: #0d8df1;
             color: #fff !important;
         }
-        footer{
-            margin-top:20px
+
+        @media (max-width: 1200px) {
+            .banner {
+                display: none;
+            }
+
+            .fas,
+            .fa {
+                padding: 1%;
+            }
         }
     </style>
-    <header>
-        <div class="top-header bg-transparent">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12">
-                        <div class="top-header-full">
-                            <div class="top-left-hd">
-                                <ul>
-                                    <li>
-                                        <div class="wlcm-text"><a href="{{ url('/') }}" style="color:inherit">Welcome to Skillpark Inc.</a></div>
-                                    </li>
-                                    <li>
-                                        <div class="lang-icon dropdown">
-                                            <i class="fas fa-globe ln-glb" style="padding: 0;"></i>
-                                            <a href="#" class="icon15 dropdown-toggle-no-caret" role="button" data-toggle="dropdown">
-                                                EN <i class="fas fa-caret-down p-crt" style="padding: 0;"></i>
-                                            </a>
-                                            <div class="dropdown-menu lanuage-dropdown dropdown-menu-left">
-                                                <a class="link-item" href="#">EN</a>
-                                                <a class="link-item" href="#">नेपाली</a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="top-right-hd">
-                                <ul>
-                                    <li>
-                                        <div class="account order-1 dropdown">
-                                            @guest
-                                            <a href="#" class="account-link dropdown-toggle-no-caret" role="button" data-toggle="dropdown">
-                                                <span style="color:#847577;font-size:12px">Learn More</span>
-                                                <i style="color:#847577;font-size:12px" class="fas fa-sort-down"></i>
-                                            </a>
-                                            <div class="dropdown-menu account-dropdown dropdown-menu-right">
-                                                <a class="link-item" href="{{ url('terms') }}">Terms and
-                                                    Condition</a>
-                                                <a class="link-item" href="{{ url('privacy') }}">Privacy
-                                                    Policy</a>
-                                                <a class="link-item" href="{{ url('creators') }}">Creators /
-                                                    Founders</a>
-                                            </div>
-                                            @else
-                                            <a href="#" class="account-link dropdown-toggle-no-caret" role="button" data-toggle="dropdown">
-                                                <div class="user-dp"><img src="{{ Auth::user()->avatar }}" alt="{{ Auth::user()->name }}"></div>
-                                                <span>Hi! {{ Auth::user()->name }}</span>
-                                                <i class="fas fa-sort-down"></i>
-                                            </a>
-                                            <div class="dropdown-menu account-dropdown dropdown-menu-right">
-                                                <a class="link-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                                    Logout</a>
-                                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                                    @csrf
-                                                </form>
-                                            </div>
-                                            @endguest
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
 </head>
 
 <body>
@@ -160,9 +105,9 @@
     @yield('content')
 
     <!-- footer Start -->
-    <footer class="footer">
+    <footer class="footer bg-transparent">
 
-        <div class="copy-social">
+        <div class="copy-social my-0">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 col-md-6">
@@ -187,7 +132,7 @@
     </footer>
     <!-- footer End -->
 
-    <script>
+    <!-- <script>
         window.oncontextmenu = function() {
             return false;
         }
@@ -199,7 +144,7 @@
             }
         });
     </script>
-    <!-- Scripts js -->
+    Scripts js -->
     <script src="/js/jquery.min.js"></script>
     <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="/vendor/OwlCarousel/owl.carousel.js"></script>

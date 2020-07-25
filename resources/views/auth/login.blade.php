@@ -6,10 +6,13 @@
 </script>
 
 <!-- Login -->
-<main class="browse-section py-3">
+<main class="browse-section justify-content-center">
     <div class="container">
-        <div class="row justify-content-center align-items-center d-flex vh-100">
-            <div class="col-lg-4 mx-auto">
+        <div class="row">
+            <div class="col-xl-7 justify-content-center align-items-center d-flex vh100">
+                <img src="/images/svg/login.svg" class="banner" style="width:500px">
+            </div>
+            <div class="col-xl-4 col-lg-12 col-sm-12 justify-content-center align-items-center">
                 <div class="osahan-login" style="font-size: 13px !important;">
                     <div class="text-center mb-4">
                         <a href="{{ url('/') }}"><img src="images/fav-miver.svg" style="width: 50px;" alt=""></a>
@@ -36,7 +39,7 @@
                             <label class="mb-1">Password</label>
                             <div class="position-relative icon-form-control">
                                 <i class="fas fa-key position-absolute"></i>
-                                <input type="password" name="password" id="password" class="form-control"/>
+                                <input type="password" name="password" id="password" class="form-control" />
                                 @error('password')
                                 <span class="feedback" style="color:red;" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -71,8 +74,8 @@
                         <div class="py-3 d-flex align-item-center">
                             @if (Route::has('password.request'))
                             <a href="{{ route('password.request') }}">
-                               @endif 
-                               Forgot password?</a>
+                                @endif
+                                Forgot password?</a>
                             <span class="ml-auto"> New to Skillpark? <a href="{{ route('register') }}">Join now</a></span>
                         </div>
                     </form>
@@ -81,6 +84,6 @@
         </div>
     </div>
 </main>
-    <!-- End Login -->
+<!-- End Login -->
 
-    @endsection
+@endsection

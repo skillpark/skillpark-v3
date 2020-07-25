@@ -4,8 +4,8 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-<div class="container" style="padding-top:20px ;">
-    <div class="row">
+<div class="container">
+    <div class="row" style="padding-top: 40px;">
         <div class="col-12 col-md-7 col-lg-8 col-xl-9">
             <div class="privacy">
                 <h2 class="privacy__title">Privacy policy</h2>

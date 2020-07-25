@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers\Auth;
 
+use File;
 use App\User;
 use Exception;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use App\Providers\RouteServiceProvider;
 use Laravel\Socialite\Facades\Socialite;
 use Laravel\Socialite\SocialiteServiceProvider;
-use File;
 
 class SocialAuthController extends Controller
 {
@@ -35,10 +36,15 @@ class SocialAuthController extends Controller
      *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function show()
-    {
-        return view('auth.addinfo');
-    }
+    protected $redirectTo = RouteServiceProvider::HOME;
+    // protected function redirectTo()
+    // {
+    //     if (Auth::user()->usertype == 'freelancer') {
+    //         return view('freelancers.home');
+    //     } else {
+    //         return view('clients.home');
+    //     }
+    // }
 
     /**
      * Redirect to provider for authentication
@@ -87,7 +93,7 @@ class SocialAuthController extends Controller
      */
     protected function sendSuccessResponse()
     {
-        return redirect()->intended('/select-profile');
+        return redirect()->intended('/register/user-information');
     }
 
     /**
