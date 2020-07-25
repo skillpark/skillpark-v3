@@ -22,7 +22,7 @@
                     </div>
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
-                        <!-- <div class="form-row">
+                        <div class="form-row">
                             <div class="col">
                                 <div class="form-group">
                                     <label class="mb-1">Name</label>
@@ -37,7 +37,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div> -->
+                        </div> 
                         <div class="form-group">
                             <label class="mb-1">Email</label>
                             <div class="position-relative icon-form-control">

@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, shrink-to-fit=9">
-    <meta name="description" content="Gambolthemes">
-    <meta name="author" content="Gambolthemes">
+    <meta name="description" content="Skillpark">
+    <meta name="author" content="Skillpark">
     <title>Skillpark Inc. - Hire Expert Freelancers Any Time</title>
 
     <!-- Favicon Icon -->

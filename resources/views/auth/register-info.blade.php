@@ -23,8 +23,7 @@
                     </div>
                     <div class="form-group form-password">
                         <label for="password" class="form-label">Password</label>
-                        <input type="password" name="password" placeholder="(Leave empty for your previous password)"
-                            id="password" data-indicator="pwindicator" />
+                        <input type="password" name="password" placeholder="(Leave empty for your previous password)" id="password" data-indicator="pwindicator" />
                         <div id="pwindicator">
                             <div class="bar-strength">
                                 <div class="bar-process">
@@ -65,8 +64,7 @@
                     </div>
                     <div class="form-group">
                         <label for="about_us" class="form-label">Tagline</label>
-                        <input type="text" name="about_us" id="about_us" placeholder="Title that best defines you.."
-                            required />
+                        <input type="text" name="about_us" id="about_us" placeholder="Title that best defines you.." required />
                     </div>
                     <!--  <div class="form-radio">
                         <label for="gender" class="form-label">Gender</label>
@@ -81,9 +79,7 @@
 
                     <div class="form-textarea">
                         <label for="about_us" class="form-label">About Me</label>
-                        <textarea name="about_us" id="about_us" minlength="50" maxlength="200"
-                            placeholder="Minimum of 50 characters that describes your talents, skills and interests"
-                            required /></textarea>
+                        <textarea name="about_us" id="about_us" minlength="50" maxlength="200" placeholder="Minimum of 50 characters that describes your talents, skills and interests" required /></textarea>
                     </div>
                 </div>
 
@@ -160,8 +156,48 @@
                 </div>
             </fieldset>
         </form>
+
+    </div>
+    <link rel="stylesheet" href="/css/popup.css">
+    <div class="modal-container"></div>
+    <div class="modal">
+        <div class="modal-container">
+            <div class="modal-left">
+                <h1 class="modal-title">Welcome! {{ Auth::user()->name }}</h1>
+                <img src="/images/svg/login.svg" style="width: 110px;">
+
+                <h4 class="modal-title" style="font-size:16px;font-weight:600">The final stop of your freelancing search is here.</h4>
+                <p class="modal-desc"> You will be able to hire freelancers as per your need.</p>
+                <p class="modal-desc">Or get paid for your skills by the verified employers and businesses.</p>
+
+                <p class="modal-desc">We need some information to make <b>skillpark</b> more dynamic and as per your need.</p>
+
+                <img src="/images/logo.svg">
+                <div class="col-lg-12 col-md-12">
+                    <div class="social-icons">
+                        <ul>
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                            <li><a href="#"><i class="fab fa-github"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-right">
+                <img src="https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=dfd2ec5a01006fd8c4d7592a381d3776&auto=format&fit=crop&w=1000&q=80" alt="">
+            </div>
+            <button class="icon-button close-button">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                    <path d="M 25 3 C 12.86158 3 3 12.86158 3 25 C 3 37.13842 12.86158 47 25 47 C 37.13842 47 47 37.13842 47 25 C 47 12.86158 37.13842 3 25 3 z M 25 5 C 36.05754 5 45 13.94246 45 25 C 45 36.05754 36.05754 45 25 45 C 13.94246 45 5 36.05754 5 25 C 5 13.94246 13.94246 5 25 5 z M 16.990234 15.990234 A 1.0001 1.0001 0 0 0 16.292969 17.707031 L 23.585938 25 L 16.292969 32.292969 A 1.0001 1.0001 0 1 0 17.707031 33.707031 L 25 26.414062 L 32.292969 33.707031 A 1.0001 1.0001 0 1 0 33.707031 32.292969 L 26.414062 25 L 33.707031 17.707031 A 1.0001 1.0001 0 0 0 32.980469 15.990234 A 1.0001 1.0001 0 0 0 32.292969 16.292969 L 25 23.585938 L 17.707031 16.292969 A 1.0001 1.0001 0 0 0 16.990234 15.990234 z"></path>
+                </svg>
+            </button>
+        </div>
+        <button class="modal-button">Get Started &nbsp; <i class="fa fa-play fa-sm" aria-hidden="true"></i></button>
     </div>
 
+    <script src="/js/popup.js"></script>
 </div>
-
 @endsection

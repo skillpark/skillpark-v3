@@ -26,11 +26,9 @@
             <div class="row py-lg-4">
                 <div class="col-lg-6 mx-auto">
                     <div class="homepage-search-title">
-                        <h1 class="mb-3 text-shadow text-gray-900 font-weight-bold" style="font-size: 2rem;">Find The Perfect Freelance Services
-                            For
-                            Your Business</h1>
-                        <h5 class="mb-5 text-shadow text-gray-800 font-weight-normal">Hire Expert Freelancers for Your
-                            Projects, Any Time.
+                        <h1 class="mb-3 text-shadow text-gray-900 font-weight-bold" style="font-size: 2rem;">Where seeker meets the perfect and trusted freelancer talents</h1>
+                        <h5 class="mb-5 text-shadow text-gray-700 font-weight-normal">Hire expert freelancers for your
+                            projects any time.
                         </h5>
                     </div>
                     <div class="homepage-search-form">
@@ -48,9 +46,9 @@
                     <div class="popular">
                         <span class="text-body-2">Popular</span>
                         <ul>
-                            <li><a href="#" class="text-body-2">Voice over</a></li>
-                            <li><a href="#" class="text-body-2">translation</a></li>
-                            <li><a href="#" class="text-body-2">logo design</a></li>
+                            <li><a href="#" class="text-body-2">Web App</a></li>
+                            <li><a href="#" class="text-body-2">Flutter Dev</a></li>
+                            <li><a href="#" class="text-body-2">Logo design</a></li>
                             <li><a href="#" class="text-body-2">Articles &amp; Blog Posts</a></li>
                         </ul>
                     </div>

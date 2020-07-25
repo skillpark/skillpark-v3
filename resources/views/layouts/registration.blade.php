@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, shrink-to-fit=9">
-    <meta name="description" content="Gambolthemes">
-    <meta name="author" content="Gambolthemes">
+    <meta name="description" content="Skillpark">
+    <meta name="author" content="Skillpark">
     <title>Skillpark Inc. - Hire Expert Freelancers Any Time</title>
 
     <!-- Favicon Icon -->
@@ -19,6 +19,7 @@
     <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/registration.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
     <style>
         .container {
@@ -45,13 +46,13 @@
         }
 
         label.error {
-            right:400px;
+            right: 400px;
             font-size: 12px;
             font-weight: 700;
         }
 
-        @media screen and (max-width: 768px){
-            label.error{
+        @media screen and (max-width: 768px) {
+            label.error {
                 position: unset;
             }
         }

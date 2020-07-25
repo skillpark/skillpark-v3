@@ -4,10 +4,8 @@ namespace App\Http\Controllers\Auth;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Auth;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
-
 
 class LoginController extends Controller
 {
@@ -22,24 +20,16 @@ class LoginController extends Controller
     |
     */
 
-    use AuthenticatesUsers;
+    use AuthenticatesUsers {
+        logout as performLogout;
+    }
 
     /**
      * Where to redirect users after login.
      *
      * @var string
      */
-    protected function redirectTo(){
-        if (Auth::user()->usertype=='client') {
-            return route('client');
-        } else {
-            return route('freelancer');
-        }
-    }
-
-    use AuthenticatesUsers {
-        logout as performLogout;
-    }
+    protected $redirectTo = RouteServiceProvider::HOME;
 
     /**
      * Create a new controller instance.
