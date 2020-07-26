@@ -21,16 +21,16 @@
                             <div class="job-item">
                                 <div class="job-top-dt1 text-center">
                                     <div class="job-center-dt">
-                                        <img src="images/homepage/candidates/img-1.jpg" alt="">
+                                        <img src="images/default.jpg" alt="">
                                         <div class="job-urs-dts">
                                             <a href="#">
-                                                <h4>John Doe</h4>
+                                                <h4>Sushant Poudel</h4>
                                             </a>
                                             <span>UX Designer</span>
                                             <div class="avialable">Available Full Time</div>
                                         </div>
                                     </div>
-                                    <div class="job-price hire-price">$50/hr</div>
+                                    <div class="job-price hire-price">Rs. 5000/hr</div>
                                 </div>
                                 <div class="rating-location">
                                     <div class="left-rating">
@@ -47,7 +47,7 @@
                                     <div class="right-location">
                                         <div class="text-left">
                                             <div class="rtitle">Location</div>
-                                            <span><i class="fas fa-map-marker-alt"></i> New York City</span>
+                                            <span><i class="fas fa-map-marker-alt"></i> Jhapa</span>
                                         </div>
                                     </div>
                                 </div>
@@ -67,13 +67,13 @@
                                         <img src="images/homepage/candidates/img-2.jpg" alt="">
                                         <div class="job-urs-dts">
                                             <a href="#">
-                                                <h4>Albert Dua</h4>
+                                                <h4>Nitika Bhatta</h4>
                                             </a>
                                             <span>Wordpress Developer</span>
                                             <div class="avialable">Available Full Time</div>
                                         </div>
                                     </div>
-                                    <div class="job-price hire-price">$50/hr</div>
+                                    <div class="job-price hire-price">Rs. 5000/hr</div>
                                 </div>
                                 <div class="rating-location">
                                     <div class="left-rating">
@@ -90,7 +90,7 @@
                                     <div class="right-location">
                                         <div class="text-left">
                                             <div class="rtitle">Location</div>
-                                            <span><i class="fas fa-map-marker-alt"></i> Australia</span>
+                                            <span><i class="fas fa-map-marker-alt"></i> Dhangadhi</span>
                                         </div>
                                     </div>
                                 </div>
@@ -110,13 +110,13 @@
                                         <img src="images/homepage/candidates/img-3.jpg" alt="">
                                         <div class="job-urs-dts">
                                             <a href="#">
-                                                <h4>Rock William</h4>
+                                                <h4>Divesh Thaoa</h4>
                                             </a>
                                             <span>Php Developer</span>
                                             <div class="avialable">Available Full Time</div>
                                         </div>
                                     </div>
-                                    <div class="job-price hire-price">$60/hr</div>
+                                    <div class="job-price hire-price">Rs. 60000/hr</div>
                                 </div>
                                 <div class="rating-location">
                                     <div class="left-rating">
@@ -133,7 +133,7 @@
                                     <div class="right-location">
                                         <div class="text-left">
                                             <div class="rtitle">Location</div>
-                                            <span><i class="fas fa-map-marker-alt"></i> India</span>
+                                            <span><i class="fas fa-map-marker-alt"></i> Gwarko</span>
                                         </div>
                                     </div>
                                 </div>
@@ -153,13 +153,13 @@
                                         <img src="images/homepage/candidates/img-4.jpg" alt="">
                                         <div class="job-urs-dts">
                                             <a href="#">
-                                                <h4>Joy Smith</h4>
+                                                <h4>Simkhada Khatiwada</h4>
                                             </a>
                                             <span>Android Developer</span>
                                             <div class="avialable">Available Full Time</div>
                                         </div>
                                     </div>
-                                    <div class="job-price hire-price">$60/hr</div>
+                                    <div class="job-price hire-price">Rs. 6000/hr</div>
                                 </div>
                                 <div class="rating-location">
                                     <div class="left-rating">
@@ -176,7 +176,7 @@
                                     <div class="right-location">
                                         <div class="text-left">
                                             <div class="rtitle">Location</div>
-                                            <span><i class="fas fa-map-marker-alt"></i> India</span>
+                                            <span><i class="fas fa-map-marker-alt"></i> Kathmandu</span>
                                         </div>
                                     </div>
                                 </div>
@@ -202,7 +202,7 @@
                                             <div class="avialable">Available Full Time</div>
                                         </div>
                                     </div>
-                                    <div class="job-price hire-price">$30/hr</div>
+                                    <div class="job-price hire-price">Rs. 30000/hr</div>
                                 </div>
                                 <div class="rating-location">
                                     <div class="left-rating">
@@ -219,7 +219,7 @@
                                     <div class="right-location">
                                         <div class="text-left">
                                             <div class="rtitle">Location</div>
-                                            <span><i class="fas fa-map-marker-alt"></i> India</span>
+                                            <span><i class="fas fa-map-marker-alt"></i> Pokhara</span>
                                         </div>
                                     </div>
                                 </div>
@@ -239,13 +239,13 @@
                                         <img src="images/homepage/candidates/img-6.jpg" alt="">
                                         <div class="job-urs-dts">
                                             <a href="#">
-                                                <h4>Jass Singh</h4>
+                                                <h4>Aakash Jha</h4>
                                             </a>
                                             <span>Front End Developer</span>
                                             <div class="avialable">Available Full Time</div>
                                         </div>
                                     </div>
-                                    <div class="job-price hire-price">$25/hr</div>
+                                    <div class="job-price hire-price">Rs. 2500/hr</div>
                                 </div>
                                 <div class="rating-location">
                                     <div class="left-rating">
@@ -262,7 +262,7 @@
                                     <div class="right-location">
                                         <div class="text-left">
                                             <div class="rtitle">Location</div>
-                                            <span><i class="fas fa-map-marker-alt"></i> India</span>
+                                            <span><i class="fas fa-map-marker-alt"></i> Birgunj</span>
                                         </div>
                                     </div>
                                 </div>

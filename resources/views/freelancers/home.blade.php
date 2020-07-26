@@ -68,7 +68,7 @@
                         <img src="img/user2.jpg" alt="">
                     </a>
                     <div class="post__head-title">
-                        <h5><a href="#">Andy Ramos</a></h5>
+                        <h5><a href="#">Divesh Thapa</a></h5>
                         <p>11 min ago</p>
                     </div>
 
@@ -143,7 +143,7 @@
                         <img src="img/user6.jpg" alt="">
                     </a>
                     <div class="post__head-title">
-                        <h5><a href="#">Sophia Mendoza</a></h5>
+                        <h5><a href="#">Aditi Budathoki</a></h5>
                         <p>22 min ago</p>
                     </div>
 
@@ -218,7 +218,7 @@
                         <img src="img/user1.jpg" alt="">
                     </a>
                     <div class="post__head-title">
-                        <h5><a href="#">Santiago Robinson</a></h5>
+                        <h5><a href="#">Bibek Dhungana</a></h5>
                         <p>37 min ago</p>
                     </div>
 
@@ -293,7 +293,7 @@
                         <img src="img/user5.jpg" alt="">
                     </a>
                     <div class="post__head-title">
-                        <h5><a href="#">John Doe</a></h5>
+                        <h5><a href="#">Aanchal Sharma</a></h5>
                         <p>58 min ago</p>
                     </div>
 
