@@ -197,7 +197,7 @@ textarea {
 p {
     font-size: 14px;
     line-height: 26px;
-    color: #959fbb;
+    color: #666;
 }
 
 /* ================ Typography Css =============== */
@@ -570,9 +570,10 @@ header {
 
 .sub-header {
     background-color: #fff !important;
-    padding: 12px 0 !important;
+    padding: 15px 0 !important;
     float: left;
     width: 100%;
+    font-weight: 600;
     position: relative;
 }
 
@@ -739,7 +740,7 @@ header {
 }
 
 .mt1-5 {
-    margin-top: 94px !important;
+    margin-top: 54px !important;
 }
 
 .page-links {
@@ -1540,7 +1541,7 @@ span.right-cm {
 .find-lts-jobs {
     float: left;
     width: 100%;
-    padding: 76px 0 0;
+    padding-bottom: 76px;
 }
 
 .lts-jobs-slider {
@@ -1869,12 +1870,12 @@ span.right-cm {
     margin-top: 30px;
 }
 
-.p-category>a:hover img {
+/* .p-category>a:hover img {
     -webkit-transform: rotateY(360deg);
     -ms-transform: rotateY(360deg);
     transform: rotateY(360deg);
     transition: transform 0.8s linear;
-}
+} */
 
 .featured-candidates {
     float: left;
@@ -2321,7 +2322,7 @@ span.right-cm {
 }
 
 .footer-links ul li a {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     color: #7a7d85;
     font-weight: 400;
     line-height: 32px;
@@ -2801,6 +2802,10 @@ span.right-cm {
     border-bottom: 0;
     margin: 0 0 30px;
     border-bottom: 0;
+}
+
+.nav-link{
+    color:#666 !important;
 }
 
 .main-tabs .nav-tabs .nav-item.show .nav-link,
@@ -7650,4 +7655,50 @@ span.right-cm {
 .print_btn:hover {
     background: #242424;
     color: #fff !important;
+}
+
+.js-cookie-consent {
+    position: fixed;
+    text-align: center;
+    opacity: 0.9;
+    bottom: 16px;
+    border-radius: 6px;
+    background: #2f263c;
+    color: #fff;
+    padding: 15px 15px;
+    width: calc(99vw);
+    z-index: 9999;
+}
+
+.js-cookie-consent button {
+    display: block;
+    text-align: center;
+    padding: 5px 25px;
+    margin: 8px auto 0 auto;
+    border-radius: 6px;
+    background: #28b983;
+    border: 1px solid #28b983;
+    color: #fff;
+    transition: all .3s ease;
+    text-decoration: none;
+}
+
+.js-cookie-consent button:hover {
+    opacity: 0.8;
+    color: #fff;
+}
+
+.js-cookie-consent a:hover {
+    color: rgb(209, 202, 202);
+}
+
+@media only screen and (max-width:976px) {
+    .js-cookie-consent {
+        text-align: center;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: auto;
+        padding: 10px 30px;
+    }
 }

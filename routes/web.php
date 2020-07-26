@@ -20,7 +20,7 @@ Route::get('/contact', function () {
     return view('about.contact');
 });
 
-Route::get('terms', function () {
+Route::get('policy', function () {
     return view('about.terms');
 });
 

@@ -94,7 +94,7 @@
 
             .fas,
             .fa {
-                padding: 1%;
+                padding: 3%;
             }
         }
     </style>
