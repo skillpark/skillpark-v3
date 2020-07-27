@@ -570,10 +570,10 @@ header {
 
 .sub-header {
     background-color: #fff !important;
-    padding: 15px 0 !important;
+    padding: 12px 0 !important;
     float: left;
     width: 100%;
-    font-weight: 600;
+    font-weight: 500;
     position: relative;
 }
 
@@ -700,6 +700,11 @@ header {
     padding: 0 8px;
 }
 
+@media (max-width: 767px) and (min-width: 0px){
+    .navbar-expand-lg .navbar-nav{
+        flex-direction: column !important;
+    }
+}
 .navbar-light .navbar-nav .nav-link {
     color: rgba(36, 36, 36) ;
     font-size: 14px;

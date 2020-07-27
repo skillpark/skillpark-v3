@@ -21,9 +21,9 @@
 <!-- Body Start -->
 <main class="body-section">
     <!-- Begin Page Content -->
-    <section class="py-5 homepage-search-block position-relative" style="background-color: #f0f2f5;">
+    <section class="py-5 homepage-search-block position-relative" style="background-color: #f0f2f5;padding-top:5rem !important">
         <div class="container">
-            <div class="row py-lg-4">
+            <div class="row py-lg-5">
                 <div class="col-lg-6 mx-auto">
                     <div class="homepage-search-title">
                         <h1 class="mb-3 text-shadow text-gray-900 font-weight-bold" style="font-size: 2rem;">Where
