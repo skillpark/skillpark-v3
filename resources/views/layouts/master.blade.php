@@ -384,11 +384,11 @@
         $("#header-scroll").hide();
         $(window).scroll(function() {
             if ($(this).scrollTop() > 150) {
-                $('#header-scroll').slideDown(300);
-                $('#header-full').slideUp(300);
+                $('#header-scroll').fadeIn(200);
+                $('#header-full').fadeOut(200);
             } else {
-                $('#header-scroll').slideUp(300);
-                $('#header-full').slideDown(300);
+                $('#header-scroll').fadeOut(200);
+                $('#header-full').fadeIn(200);
             }
         });
     </script>
