@@ -25,28 +25,29 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
     <style>
-        #header-full,
-        #header-scroll {
+        .sub-header{
             position: fixed;
             z-index: 9999;
             width: 100%;
             top: 0px;
         }
+        
+        #header-scroll{
+            position: fixed;
+            z-index: 9999;
+            width: 100%;
+            top: 60px;
+        }
 
-        @media (max-width: 767px) and (min-width: 0px) {
-            #header-scroll {
+        @media (max-width: 976px) and (min-width: 0px) {
+            #header-scroll, #header-search {
                 display: none !important;
-            }
-
-            #header-full {
-                display: block !important;
             }
         }
     </style>
 </head>
 
 <body>
-    <!-- Search Model Start -->
     <div class="modal srch-model fade" id="searchModal" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-xl" role="document">
             <div class="modal-content">
@@ -61,18 +62,27 @@
             </div>
         </div>
     </div>
-    <!-- Search Model End -->
-    <!-- Header Start -->
     <header>
-        <div class="sub-header" id="header-full">
+        <div class="sub-header">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12">
                         <nav class="navbar navbar-expand-lg navbar-light justify-content-sm-start">
-                            <a class="order-1 order-lg-0 ml-lg-0 ml-3 mr-auto" href="{{ url('/') }}"><img src="/images/logo.svg" width="120" alt=""></a>
+                            <a class="order-1 order-lg-0 ml-lg-0 ml-3 mr-auto" href="{{ url('/') }}"><img src="/images/logo.svg" width="120" alt=""></a>                                               
                             <button class="navbar-toggler align-self-start" type="button">
                                 <i class="fas fa-bars"></i>
                             </button>
+                            <!-- Topbar Search -->
+                            <form class="d-none d-sm-inline-block form-inline mr-auto ml-3 my-2 my-md-0 mw-200 navbar-search">
+                                <div class="input-group" id="header-search" style="width: 300px;">
+                                    <input type="text" class="form-control bg-white small" placeholder="Find Services..." aria-label="Search" aria-describedby="basic-addon2" style="font-size: 13px;">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-success" type="button" style="font-size: 13px;">
+                                            <i class="fa fa-search fa-sm"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
                             <div class="collapse navbar-collapse d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end bg-dark1 p-3 p-lg-0 mt1-5 mt-lg-0 mobileMenu" id="navbarSupportedContent">
                                 <ul class="navbar-nav align-self-stretch">
                                     <li class="nav-item">
@@ -125,84 +135,6 @@
     </header>
     <!-- Header End -->
     <div id="header-scroll">
-        <nav class="navbar navbar-expand-lg navbar-light topbar static-top shadow-sm bg-white osahan-nav-top px-0" style="padding: 7px !important;font-size:13px;">
-            <div class="container">
-                <!-- Sidebar Toggle (Topbar) -->
-                <a class="navbar-brand" href=""><img src="/images/logo.svg" alt=""></a>
-                <!-- Topbar Search -->
-                <form class="d-none d-sm-inline-block form-inline mr-auto my-2 my-md-0 mw-200 navbar-search">
-                    <div class="input-group" style="width: 300px;">
-                        <input type="text" class="form-control bg-white small" placeholder="Find Services..." aria-label="Search" aria-describedby="basic-addon2" style="font-size: 13px;">
-                        <div class="input-group-append">
-                            <button class="btn btn-success" type="button" style="font-size: 13px;">
-                                <i class="fa fa-search fa-sm"></i>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-                <!-- Topbar Navbar -->
-                <ul class="navbar-nav align-items-center ml-auto">
-                    <li class="nav-item dropdown no-arrow no-caret mr-3 dropdown-notifications d-sm-none">
-                        <a class="btn btn-icon btn-transparent-dark dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fa fa-search fa-fw"></i>
-                        </a>
-                        <!-- Dropdown - Messages -->
-                        <div class="dropdown-menu dropdown-menu-right p-3 shadow-sm animated--grow-in" aria-labelledby="searchDropdown">
-                            <form class="form-inline mr-auto w-100 navbar-search">
-                                <div class="input-group" style="width: 350px;">
-                                    <input type="text" class="form-control bg-light border-0 small" placeholder="Find Services..." aria-label="Search" aria-describedby="basic-addon2">
-                                    <div class="input-group-append">
-                                        <button class="btn btn-primary" type="button">
-                                            <i class="fa fa-search fa-sm"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </li>
-                    <div class="collapse navbar-collapse d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end bg-dark1 p-3 p-lg-0 mt1-5 mt-lg-0 mobileMenu" id="navbarSupportedContent">
-                        <ul class="navbar-nav align-self-stretch">
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ url('how-it-works') }}">About <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link" href="{{ url('/') }}">Enterprise</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle-no-caret" role="button" data-toggle="dropdown">Explore</a>
-                                <div class="dropdown-menu pages-dropdown">
-                                    <a class="link-item" href="{{ url('/') }}">Companies</a>
-                                    <a class="link-item" href="{{ url('/') }}">Freelancers</a>
-                                </div>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle-no-caret" role="button" data-toggle="dropdown">
-                                    Categories
-                                </a>
-                                <div class="dropdown-menu pages-dropdown">
-                                    <a class="link-item" href="#">Graphics &amp; Design</a>
-                                    <a class="link-item" href="#">Digital Marketing</a>
-                                    <a class="link-item" href="#">Writing &amp; Translation</a>
-                                    <a class="link-item" href="#">Video &amp; Animation</a>
-                                    <a class="link-item" href="#">Lifestyle</a>
-                                    <a class="link-item" href="#">Sitemap</a>
-                                    <a class="link-item" href="#">Music &amp; Audio</a>
-                                    <a class="link-item" href="#">Programming &amp; Tech</a>
-                                    <a class="link-item" href="#">Business</a>
-                                </div>
-                            </li>
-                        </ul>
-                        @guest
-                        <a href="{{ route('login') }}" class="add-post">Login</a>
-                        <a href="{{ route('register') }}" class="add-project">Signup</a>
-                        @else
-                        <a href="{{ route('home') }}" class="add-post">Dashboard</a>
-                        @endguest
-                    </div>
-                </ul>
-            </div>
-        </nav>
-        <!-- Navigation -->
         <nav id="third-header-scroll" class="navbar navbar-expand-lg navbar-light bg-white osahan-nav-mid px-0 border-top shadow-sm">
             <div class="container">
                 <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -382,13 +314,14 @@
     <!-- Scroll to Top Button End -->
     <script>
         $("#header-scroll").hide();
+        $("#header-search").hide();
         $(window).scroll(function() {
             if ($(this).scrollTop() > 150) {
-                $('#header-scroll').fadeIn(200);
-                $('#header-full').fadeOut(200);
+                $('#header-scroll').slideDown(300);
+                $('#header-search').fadeIn(100);
             } else {
-                $('#header-scroll').fadeOut(200);
-                $('#header-full').fadeIn(200);
+                $('#header-scroll').slideUp(300);
+                $('#header-search').fadeOut(100);
             }
         });
     </script>

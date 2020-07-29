@@ -7665,8 +7665,8 @@ span.right-cm {
 .js-cookie-consent {
     position: fixed;
     text-align: center;
-    opacity: 0.9;
-    bottom: 16px;
+    opacity: 0.99;
+    bottom: 0px;
     border-radius: 6px;
     background: #2f263c;
     color: #fff;

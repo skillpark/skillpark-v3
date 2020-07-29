@@ -43,6 +43,17 @@ Route::get('/freelancer', function () {
     return view('freelancers.home');
 })->name('freelancer')->middleware('verified');
 
+Route::get('/project', function () {
+    return view('tasks.task');
+})->middleware('verified');
+
+Route::get('/profile', function () {
+    return view('freelancers.profile');
+})->middleware('verified');
+
+Route::get('/user', function () {
+    return view('clients.freelancer-profile');
+})->middleware('verified');
 
 Route::middleware(['verified','freelancer'])->group(function () {
     
