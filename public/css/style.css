@@ -612,13 +612,13 @@ header {
 }
 
 .top-right-hd li:first-child {
-    border-left: 1px solid #eaeaea;
+    /* border-left: 1px solid #eaeaea; */
 }
 
 .top-right-hd li {
     display: inline-block;
     padding: 5px 20px;
-    border-right: 1px solid #eaeaea;
+    /* border-right: 1px solid #eaeaea; */
 }
 
 .wlcm-text {
@@ -745,7 +745,7 @@ header {
 }
 
 .mt1-5 {
-    margin-top: 54px !important;
+    margin-top: 75px !important;
 }
 
 .page-links {
@@ -905,7 +905,7 @@ header {
     font-size: 13px;
     font-weight: 500;
     color: #fff;
-    background: #242424;
+    background: #1dc8cc;
     padding: 8px 20px;
     border-radius: 3px;
     margin-left: 10px;
@@ -915,7 +915,7 @@ header {
 
 .add-task:hover {
     color: #fff !important;
-    background: #313131 !important
+    background: #1bb7bb !important
 }
 
 .responsive-search {
@@ -2287,7 +2287,7 @@ span.right-cm {
 }
 /* get started */
  .get-started {
-     background: url(../images/get-started.jpg) center top no-repeat;
+     background: url(../images/add/get-started.jpg) center top no-repeat;
      background-size: cover;
      text-align: center;
      padding: 60px 0;

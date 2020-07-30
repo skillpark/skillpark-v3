@@ -10,7 +10,7 @@
     <title>Skillpark Inc. - Hire Expert Freelancers Any Time</title>
 
     <!-- Favicon Icon -->
-    <link rel="icon" type="image/png" href="/images/fav-miver.svg">
+    <link rel="icon" type="image/png" href="/images/logo/favicon.svg">
 
     <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" href="/vendor/semantic/semantic.min.css">
@@ -25,18 +25,24 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
     <style>
-        .sub-header{
+        .top-header{
             position: fixed;
             z-index: 9999;
             width: 100%;
             top: 0px;
         }
+        .sub-header{
+            position: fixed;
+            z-index: 999;
+            width: 100%;
+            top: 40px;
+        }
         
         #header-scroll{
             position: fixed;
-            z-index: 9999;
+            z-index: 999;
             width: 100%;
-            top: 60px;
+            top: 100px;
         }
 
         @media (max-width: 976px) and (min-width: 0px) {
@@ -63,15 +69,83 @@
         </div>
     </div>
     <header>
-        <div class="sub-header">
+        <div class="top-header">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12">
-                        <nav class="navbar navbar-expand-lg navbar-light justify-content-sm-start">
-                            <a class="order-1 order-lg-0 ml-lg-0 ml-3 mr-auto" href="{{ url('/') }}"><img src="/images/logo.svg" width="120" alt=""></a>                                               
-                            <button class="navbar-toggler align-self-start" type="button">
-                                <i class="fas fa-bars"></i>
-                            </button>
+                        <div class="top-header-full">
+                            <div class="top-left-hd">
+                                <ul>
+                                    <li>
+                                        <div class="wlcm-text">Welcome to Skillpark Inc.</div>
+                                    </li>
+                                    <li>
+                                        <div class="lang-icon dropdown">
+                                            <i class="fas fa-globe ln-glb"></i>
+                                            <a href="#" class="icon15 dropdown-toggle-no-caret" role="button" data-toggle="dropdown">
+                                                EN <i class="fas fa-caret-down p-crt"></i>
+                                            </a>
+                                            <div class="dropdown-menu lanuage-dropdown dropdown-menu-left">
+                                                <a class="link-item" href="#">EN</a>
+                                                <a class="link-item" href="#">नेपाली</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="top-right-hd">
+                                <ul>
+                                    <li>
+                                        <div class="account order-1 dropdown">
+                                            @guest
+                                            <a href="#" class="account-link dropdown-toggle-no-caret" role="button" data-toggle="dropdown">
+                                                <span style="color:#847577;font-size:12px">Learn More</span>
+                                                <i style="color:#847577;font-size:12px" class="fas fa-sort-down"></i>
+                                            </a>
+                                            <div class="dropdown-menu account-dropdown dropdown-menu-right">
+                                                <a class="link-item" href="terms">Terms and
+                                                    Condition</a>
+                                                <a class="link-item" href="policy">Privacy
+                                                    Policy</a>
+                                                <a class="link-item" href="{{ url('creators') }}">Creators /
+                                                    Founders</a>
+                                            </div>
+                                            @else
+                                            <a href="#" class="account-link dropdown-toggle-no-caret" role="button" data-toggle="dropdown">
+                                                <div class="user-dp"><img src="/{{ Auth::user()->avatar }}" alt="{{ Auth::user()->name }}"></div>
+                                                <span>Hi! {{ Auth::user()->name }}</span>
+                                                <i class="fas fa-sort-down"></i>
+                                            </a>
+                                            <div class="dropdown-menu account-dropdown dropdown-menu-right">
+                                                <a class="link-item" href="dashboard">Dashboard</a>
+                                                <a class="link-item" href="settings">Setting</a>
+                                                <a class="link-item" href="messages">Messages</a>
+                                                <a class="link-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                                    Logout</a>
+                                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                    @csrf
+                                                </form>
+                                            </div>
+                                            @endguest
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sub-header">				
+				<div class="container">				
+					<div class="row">
+						<div class="col-lg-12 col-md-12 col-sm-12">
+							<nav class="navbar navbar-expand-lg navbar-light bg-dark1 justify-content-sm-start">
+								<a class="order-1 order-lg-0 ml-lg-0 ml-3 mr-auto" href="index"><img src="/images/logo/logo.svg" width="120" alt=""></a>
+								<button class="navbar-toggler align-self-start" type="button">
+									<i class="fas fa-bars"></i>
+                                </button>
                             <!-- Topbar Search -->
                             <form class="d-none d-sm-inline-block form-inline mr-auto ml-3 my-2 my-md-0 mw-200 navbar-search">
                                 <div class="input-group" id="header-search" style="width: 300px;">
@@ -83,55 +157,52 @@
                                     </div>
                                 </div>
                             </form>
-                            <div class="collapse navbar-collapse d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end bg-dark1 p-3 p-lg-0 mt1-5 mt-lg-0 mobileMenu" id="navbarSupportedContent">
-                                <ul class="navbar-nav align-self-stretch">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{{ url('how-it-works') }}">About <span class="sr-only">(current)</span></a>
-                                    </li>
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link" href="{{ url('/') }}">Enterprise</a>
-                                    </li>
-                                    <li class="nav-item dropdown">
-                                        <a href="#" class="nav-link dropdown-toggle-no-caret" role="button" data-toggle="dropdown">Explore</a>
-                                        <div class="dropdown-menu pages-dropdown">
-                                            <a class="link-item" href="{{ url('/') }}">Companies</a>
-                                            <a class="link-item" href="{{ url('/') }}">Freelancers</a>
-                                        </div>
-                                    </li>
-                                    <li class="nav-item dropdown">
-                                        <a href="#" class="nav-link dropdown-toggle-no-caret" role="button" data-toggle="dropdown">
-                                            Categories
-                                        </a>
-                                        <div class="dropdown-menu pages-dropdown">
-                                            <a class="link-item" href="#">Graphics &amp; Design</a>
-                                            <a class="link-item" href="#">Digital Marketing</a>
-                                            <a class="link-item" href="#">Writing &amp; Translation</a>
-                                            <a class="link-item" href="#">Video &amp; Animation</a>
-                                            <a class="link-item" href="#">Lifestyle</a>
-                                            <a class="link-item" href="#">Sitemap</a>
-                                            <a class="link-item" href="#">Music &amp; Audio</a>
-                                            <a class="link-item" href="#">Programming &amp; Tech</a>
-                                            <a class="link-item" href="#">Business</a>
-                                        </div>
-                                    </li>
-                                </ul>
-                                @guest
-                                <a href="{{ route('login') }}" class="add-post">Login</a>
-                                <a href="{{ route('register') }}" class="add-project">Signup</a>
-                                @else
-                                <a style="border: 2px solid #1dc8cc" href="{{ route('home') }}" class="add-post">Dashboard</a>
-                                @endguest
-                            </div>
-                            <div class="responsive-search order-1">
-                                <input type="text" class="rsp-search" placeholder="Search...">
-                                <i class="fas fa-search r-sh1"></i>
-                            </div>
-                        </nav>
-                        <div class="overlay"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+								<div class="collapse navbar-collapse d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end bg-dark1 p-3 p-lg-0 mt1-5 mt-lg-0 mobileMenu" id="navbarSupportedContent">
+                                    <ul class="navbar-nav align-self-stretch">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{ url('how-it-works') }}">About <span class="sr-only">(current)</span></a>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link" href="{{ url('/') }}">Enterprise</a>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a href="#" class="nav-link dropdown-toggle-no-caret" role="button" data-toggle="dropdown">Explore</a>
+                                            <div class="dropdown-menu pages-dropdown">
+                                                <a class="link-item" href="{{ url('/') }}">Companies</a>
+                                                <a class="link-item" href="{{ url('/') }}">Freelancers</a>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a href="#" class="nav-link dropdown-toggle-no-caret" role="button" data-toggle="dropdown">
+                                                Categories
+                                            </a>
+                                            <div class="dropdown-menu pages-dropdown">
+                                                <a class="link-item" href="#">Graphics &amp; Design</a>
+                                                <a class="link-item" href="#">Digital Marketing</a>
+                                                <a class="link-item" href="#">Writing &amp; Translation</a>
+                                                <a class="link-item" href="#">Video &amp; Animation</a>
+                                                <a class="link-item" href="#">Lifestyle</a>
+                                                <a class="link-item" href="#">Sitemap</a>
+                                                <a class="link-item" href="#">Music &amp; Audio</a>
+                                                <a class="link-item" href="#">Programming &amp; Tech</a>
+                                                <a class="link-item" href="#">Business</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+									<a href="#" class="search-link" role="button" data-toggle="modal" data-target="#searchModal"><i class="fas fa-search"></i></a>
+									<a href="{{ route('login') }}" class="add-post">Login</a>
+									<a href="{{ route('register') }}" class="add-task">Sign Up</a>									
+								</div>
+								<div class="responsive-search order-1">
+									<input type="text" class="rsp-search" placeholder="Search...">
+									<i class="fas fa-search r-sh1"></i>
+								</div>
+							</nav>							
+							<div class="overlay"></div>
+						</div>					
+					</div>					
+				</div>
+			</div>
     </header>
     <!-- Header End -->
     <div id="header-scroll">
@@ -184,7 +255,7 @@
                 </div>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="become-a-s">
+                        <a class="nav-link" href="{{ route('register') }}">
                             <i class="fa fa-fw fa-trophy"></i>
                             <span>Become A Seller</span></a>
                     </li>
@@ -217,7 +288,7 @@
             <div class="row">
                 <div class="col-lg-3 col-md-3">
                     <div class="about-jobby">
-                        <a href=""><img src="/images/logo.svg" alt=""></a>
+                        <a href=""><img src="/images/logo/logo.svg" alt=""></a>
                         <p>SKILLPARK INC. is a incorporated company which is legally acceptable nationwide. The
                             application is a Nepal National Payment Gateway Verified website. Trusted by the Government
                             of Nepal. &copy; Skillpark Inc.</p>

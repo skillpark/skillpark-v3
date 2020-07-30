@@ -15,7 +15,7 @@
             <div class="col-xl-4 col-lg-12 col-sm-12 justify-content-center align-items-center">
                 <div class="osahan-login" style="font-size: 13px !important;">
                     <div class="text-center mb-4">
-                        <a href="{{ url('/') }}"><img src="images/fav-miver.svg" style="width: 50px;" alt=""></a>
+                        <a href="{{ url('/') }}"><img src="/images/logo/block-logo.svg" style="width: 50px;" alt=""></a>
                         <h5 class="font-weight-bold mt-3" style="font-size: 1.25rem;">Join Skillpark</h5>
                         <p class="text-muted" style="color:#6c757d;font-size:12px">Connect with the verified businesses and clients and make the most of your freelancing
                             life. </p>

@@ -15,7 +15,7 @@
             <div class="col-xl-4 col-lg-12 col-sm-12 justify-content-center align-items-center">
                 <div class="osahan-login" style="font-size: 13px !important;">
                     <div class="text-center mb-4">
-                        <a href="{{ url('/') }}"><img src="images/fav-miver.svg" style="width: 50px;" alt=""></a>
+                        <a href="{{ url('/') }}"><img src="/images/logo/block-logo.svg" style="width: 50px;" alt=""></a>
                         <h5 class="font-weight-bold mt-3">Welcome Back</h5>
                         <p class="text-muted" style="font-size: 12px;">Don't miss your next opportunity. Sign in to stay updated on your freelancing world.</p>
                     </div>

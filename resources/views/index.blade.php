@@ -21,7 +21,7 @@
 <!-- Body Start -->
 <main class="body-section">
     <!-- Begin Page Content -->
-    <section class="py-5 homepage-search-block position-relative" style="background-color: #f0f2f5;padding-top:5rem !important">
+    <section class="py-5 homepage-search-block position-relative" style="background-color: #f0f2f5;padding-top:8rem !important">
         <div class="container">
             <div class="row py-lg-5">
                 <div class="col-lg-6 mx-auto">
@@ -55,7 +55,7 @@
                     </div>
                 </div>
                 <div class="col-lg-5">
-                    <img class="img-fluid" src="images/banner.svg" alt='' />
+                    <img class="img-fluid" width="500" src="images/svg/banner.svg" alt='' />
                 </div>
             </div>
         </div>
@@ -78,7 +78,7 @@
                         <h2>What We Offer</h2>
                         <span>Offering the Best Deal</span>
                         <div class="line-shape1">
-                            <img src="images/line.svg" alt="">
+                            <img src="images/svg/line.svg" alt="">
                         </div>
                     </div>
                 </div>
@@ -134,7 +134,7 @@
                         <h2>Explore the Marketplace</h2>
                         <span>Find quality talent or agencies</span>
                         <div class="line-shape1">
-                            <img src="images/line.svg" alt="">
+                            <img src="images/svg/line.svg" alt="">
                         </div>
                     </div>
                 </div>
@@ -219,7 +219,7 @@
                     <div class="main-heading">
                         <h2>Find the Latest Posts</h2>
                         <div class="line-shape1">
-                            <img src="images/line.svg" alt="">
+                            <img src="images/svg/line.svg" alt="">
                         </div>
                     </div>
                 </div>
@@ -230,16 +230,16 @@
                                 <div class="job-item">
                                     <div class="job-top-dt">
                                         <div class="job-left-dt">
-                                            <img src="images/homepage/latest-jobs/img-1.jpg" alt="">
+                                            <img src="images/logo/block-logo.svg" alt="">
                                             <div class="job-ut-dts">
                                                 <a href="#">
-                                                    <h4>John Doe</h4>
+                                                    <h4>Sushant Poudel</h4>
                                                 </a>
                                                 <span><i class="fas fa-map-marker-alt"></i> New York City</span>
                                             </div>
                                         </div>
                                         <div class="job-right-dt">
-                                            <div class="job-price">$599</div>
+                                            <div class="job-price">Rs. 5900</div>
                                             <div class="job-fp">Full Time</div>
                                         </div>
                                     </div>
@@ -259,17 +259,16 @@
                                 <div class="job-item">
                                     <div class="job-top-dt">
                                         <div class="job-left-dt">
-                                            <img src="images/homepage/latest-jobs/img-2.jpg" alt="">
+                                            <img src="images/logo/block-logo.svg" alt="">
                                             <div class="job-ut-dts">
                                                 <a href="#">
-                                                    <h4>Johnson Smith</h4>
+                                                    <h4>Nitika Bhatta</h4>
                                                 </a>
-                                                <span><i class="fas fa-map-marker-alt"></i> India</span>
+                                                <span><i class="fas fa-map-marker-alt"></i> Dhangadhi</span>
                                             </div>
                                         </div>
                                         <div class="job-right-dt">
-                                            <div class="job-price">$50/hr</div>
-                                            <div class="job-fp job-prt">Part Time</div>
+                                            <div class="job-price">Rs. 5000</div>
                                         </div>
                                     </div>
                                     <div class="job-des-dt">
@@ -288,16 +287,16 @@
                                 <div class="job-item">
                                     <div class="job-top-dt">
                                         <div class="job-left-dt">
-                                            <img src="images/homepage/latest-jobs/img-3.jpg" alt="">
+                                            <img src="images/logo/block-logo.svg" alt="">
                                             <div class="job-ut-dts">
                                                 <a href="#">
-                                                    <h4>Envato</h4>
+                                                    <h4>Rajesh Hamal</h4>
                                                 </a>
-                                                <span><i class="fas fa-map-marker-alt"></i> Australia</span>
+                                                <span><i class="fas fa-map-marker-alt"></i> Pokhara</span>
                                             </div>
                                         </div>
                                         <div class="job-right-dt">
-                                            <div class="job-price">$900</div>
+                                            <div class="job-price">Rs. 9000</div>
                                             <div class="job-fp">Full Time</div>
                                         </div>
                                     </div>
@@ -317,16 +316,16 @@
                                 <div class="job-item">
                                     <div class="job-top-dt">
                                         <div class="job-left-dt">
-                                            <img src="images/homepage/latest-jobs/img-4.jpg" alt="">
+                                            <img src="images/logo/block-logo.svg" alt="">
                                             <div class="job-ut-dts">
                                                 <a href="#">
-                                                    <h4>Joy Smith</h4>
+                                                    <h4>Divesh Thapa</h4>
                                                 </a>
-                                                <span><i class="fas fa-map-marker-alt"></i> India</span>
+                                                <span><i class="fas fa-map-marker-alt"></i> Kathmadnu</span>
                                             </div>
                                         </div>
                                         <div class="job-right-dt">
-                                            <div class="job-price">$500</div>
+                                            <div class="job-price">Rs. 50000</div>
                                             <div class="job-fp">Full Time</div>
                                         </div>
                                     </div>
@@ -345,44 +344,16 @@
                                 <div class="job-item">
                                     <div class="job-top-dt">
                                         <div class="job-left-dt">
-                                            <img src="images/homepage/latest-jobs/img-5.jpg" alt="">
+                                            <img src="images/logo/block-logo.svg" alt="">
                                             <div class="job-ut-dts">
                                                 <a href="#">
-                                                    <h4>Jassica William</h4>
+                                                    <h4>Nepali Nepal</h4>
                                                 </a>
-                                                <span><i class="fas fa-map-marker-alt"></i> Australia</span>
+                                                <span><i class="fas fa-map-marker-alt"></i> Jhapa</span>
                                             </div>
                                         </div>
                                         <div class="job-right-dt">
-                                            <div class="job-price">$300</div>
-                                            <div class="job-fp">Full Time</div>
-                                        </div>
-                                    </div>
-                                    <div class="job-des-dt">
-                                        <h4>Data Science &amp; Analytics</h4>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus pulvinar dolor nec...</p>
-                                        <div class="job-skills">
-                                            <a href="#">Delivery</a>
-                                            <a href="#">Local</a>
-                                            <a href="#">Graduation</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="job-item">
-                                    <div class="job-top-dt">
-                                        <div class="job-left-dt">
-                                            <img src="images/homepage/latest-jobs/img-6.jpg" alt="">
-                                            <div class="job-ut-dts">
-                                                <a href="#">
-                                                    <h4>Gambolthemes</h4>
-                                                </a>
-                                                <span><i class="fas fa-map-marker-alt"></i> India</span>
-                                            </div>
-                                        </div>
-                                        <div class="job-right-dt">
-                                            <div class="job-price">$60/hr</div>
+                                            <div class="job-price">Rs. 6000</div>
                                             <div class="job-fp">Full Time</div>
                                         </div>
                                     </div>
@@ -421,7 +392,7 @@
                 <div class="row">
                     <div class="col-md-4">
                         <a href="#" class="guide">
-                            <img src="images/guide-01.jpg">
+                            <img src="images/add/guide-01.jpg">
                             <div class="content">
                                 <h6>Create a Website</h6>
                                 <p>Building a stunning website from A to Z</p>
@@ -430,7 +401,7 @@
                     </div>
                     <div class="col-md-4">
                         <a href="#" class="guide">
-                            <img src="images/guide-02.jpg">
+                            <img src="images/add/guide-02.jpg">
                             <div class="content">
                                 <h6>Grow With Digital Marketing</h6>
                                 <p>Promoting your business online</p>
@@ -439,7 +410,7 @@
                     </div>
                     <div class="col-md-4">
                         <a href="#" class="guide">
-                            <img src="images/guide-03.jpg">
+                            <img src="/images/add/guide-03.jpg">
                             <div class="content">
                                 <h6>Start Freelancing</h6>
                                 <p>Differentiating yourself from the competition</p>
