@@ -25,7 +25,6 @@
     <link href="/vendor/OwlCarousel/assets/owl.theme.default.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/vendor/semantic/semantic.min.css">
 
-
 </head>
 
 <body>
@@ -33,7 +32,7 @@
         style="padding: 7px !important;font-size:13px">
         <div class="container">
             <!-- Sidebar Toggle (Topbar) -->
-            <a class="navbar-brand" href=""><img src="/images/logo.svg" alt=""></a>
+            <a class="navbar-brand" href="{{ route('home') }}"><img src="/images/logo.svg" alt=""></a>
             <!-- Topbar Search -->
             <form class="d-none d-sm-inline-block form-inline mr-auto my-2 my-md-0 mw-200 navbar-search">
                 <div class="input-group" style="width: 300px;">
@@ -90,7 +89,7 @@
                             </div>
                         </h6>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="{{ url('home') }}">
+                        <a class="dropdown-item" href="{{ url('dashboard') }}">
                             <div class="dropdown-item-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -103,7 +102,7 @@
                             </div>
                             Account
                         </a>
-                        <a class="dropdown-item" href="#" href="{{ route('logout') }}" onclick="event.preventDefault();
+                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                             <div class="dropdown-item-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"

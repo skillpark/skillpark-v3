@@ -5,10 +5,14 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Spatie\Permission\Traits\HasRoles;
+use Spatie\Permission\Models\Role;
+use Spatie\Permission\Models\Permission;
 
 class User extends Authenticatable implements MustVerifyEmail
 {
     use Notifiable;
+    use HasRoles;
 
     /**
      * The attributes that are mass assignable.
@@ -30,22 +34,17 @@ class User extends Authenticatable implements MustVerifyEmail
         'password', 'remember_token',
     ];
 
-// ------------------------roles------------------------
-    public function roles()
+    /**
+     * Send the password reset notification.
+     *
+     * @param  string  $token
+     * @return void
+     */
+    public function sendPasswordResetNotification($token)
     {
-        return $this->belongsToMany(Role::class);
+        $this->notify(new Notifications\ResetPasswordNotification($token));
     }
 
-    public function hasAnyRoles($roles){
-        return null != $this->roles()->whereIn('name', $roles)->first();
-    }
-
-    public function hasAnyRole($role)
-    {
-        return null != $this->roles()->where('name', $role)->first();
-    }
-
-// ------------------------end roles------------------------    
 
     public function getAvatarAttribute($val)
     {

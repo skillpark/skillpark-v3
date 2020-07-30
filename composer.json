@@ -17,7 +17,9 @@
         "laravel/socialite": "^4.4",
         "laravel/tinker": "^2.0",
         "laravel/ui": "^2.0",
-        "spatie/laravel-cookie-consent": "^2.12"
+        "qoraiche/laravel-mail-editor": "^2.0",
+        "spatie/laravel-cookie-consent": "^2.12",
+        "spatie/laravel-permission": "^3.13"
     },
     "require-dev": {
         "facade/ignition": "^2.0",

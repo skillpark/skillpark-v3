@@ -21,14 +21,14 @@
                             <label class="user-pict">
                             <img
                                src="images/user/s10.png"
-                               class="img-fluid user-pict-img" alt="Askbootstrap">
+                               class="img-fluid user-pict-img" alt="Skillpark">
                             <a href="#"
                                class="user-badge-round user-badge-round-med locale-en-us top-rated-seller"></a></label>
                          </div>
                       </div>
                       <div class="user-profile-label">
                          <div class="username-line">
-                            <a href="#" class="seller-link">Askbootstrap</a>
+                            <a href="#" class="seller-link">Skillpark</a>
                          </div>
                          <div class="oneliner-wrapper">
                             <small class="oneliner">Professional Voice Actress</small>
@@ -106,7 +106,7 @@
              </div>
           </div>
           <div class="col-lg-8 right">
-             <h2>Askbootstrap's Gigs</h2>
+             <h2>Skillpark's Gigs</h2>
              <div class="recommended">
                 <div class="row">
                    <div class="col-md-4">
@@ -300,7 +300,7 @@
                          </div>
                          <div class="right">
                             <h4>
-                               Askbootstrap
+                               Skillpark
                                <span class="gig-rating text-body-2">
                                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" width="15"
                                      height="15">
@@ -339,7 +339,7 @@
                          </div>
                          <div class="right">
                             <h4>
-                               Askbootstrap
+                               Skillpark
                                <span class="gig-rating text-body-2">
                                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" width="15"
                                      height="15">
@@ -378,7 +378,7 @@
                          </div>
                          <div class="right">
                             <h4>
-                               Askbootstrap
+                               Skillpark
                                <span class="gig-rating text-body-2">
                                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" width="15"
                                      height="15">
@@ -417,7 +417,7 @@
                          </div>
                          <div class="right">
                             <h4>
-                               Askbootstrap
+                               Skillpark
                                <span class="gig-rating text-body-2">
                                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" width="15"
                                      height="15">

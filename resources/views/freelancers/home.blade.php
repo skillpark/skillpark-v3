@@ -65,7 +65,7 @@
             <div class="post">
                 <div class="post__head">
                     <a href="#" class="post__head-img">
-                        <img src="img/user2.jpg" alt="">
+                        <img src="/images/uploads/default-old.jpg" alt="">
                     </a>
                     <div class="post__head-title">
                         <h5><a href="#">Divesh Thapa</a></h5>
@@ -140,7 +140,7 @@
             <div class="post">
                 <div class="post__head">
                     <a href="#" class="post__head-img">
-                        <img src="img/user6.jpg" alt="">
+                        <img src="/images/uploads/default-old.jpg" alt="">
                     </a>
                     <div class="post__head-title">
                         <h5><a href="#">Aditi Budathoki</a></h5>
@@ -215,7 +215,7 @@
             <div class="post">
                 <div class="post__head">
                     <a href="#" class="post__head-img">
-                        <img src="img/user1.jpg" alt="">
+                        <img src="/images/uploads/default-old.jpg" alt="">
                     </a>
                     <div class="post__head-title">
                         <h5><a href="#">Bibek Dhungana</a></h5>
@@ -290,7 +290,7 @@
             <div class="post">
                 <div class="post__head">
                     <a href="#" class="post__head-img">
-                        <img src="img/user5.jpg" alt="">
+                        <img src="/images/uploads/default-old.jpg" alt="">
                     </a>
                     <div class="post__head-title">
                         <h5><a href="#">Aanchal Sharma</a></h5>

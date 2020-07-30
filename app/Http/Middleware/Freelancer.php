@@ -16,17 +16,6 @@ class Freelancer
    */
   public function handle($request, Closure $next)
   {
-
-    if (Auth::user()->hasAnyRole('freelancer')) {
-      return $next($request);
-    }
-
-    return redirect('home');
-
-    if (Auth::user()->usertype != 'client') {
-      return $next($request);
-    } else {
-      return redirect()->back()->with('warning', 'You don\'t have permission to perform this action.');
-    }
+    
   }
 }

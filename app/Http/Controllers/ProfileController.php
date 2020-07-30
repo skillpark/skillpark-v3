@@ -23,10 +23,24 @@ class ProfileController extends Controller
         $this->middleware('verified');
     }
 
+    public function dashboard()
+    {
+        return view('userprofile.dashboard');
+    }
+
     public function editProfile()
     {
-        $cities = City::all();
-        return view('userprofile.settings', compact('cities'));
+        return view('userprofile.edit-profile');
+    }
+
+    public function task()
+    {
+        return view('tasks.task');
+    }
+
+    public function userDetails()
+    {
+        return view('clients.freelancer-profile');
     }
 
     /**

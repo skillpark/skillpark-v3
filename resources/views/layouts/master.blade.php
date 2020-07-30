@@ -119,7 +119,7 @@
                                 <a href="{{ route('login') }}" class="add-post">Login</a>
                                 <a href="{{ route('register') }}" class="add-project">Signup</a>
                                 @else
-                                <a href="{{ route('home') }}" class="add-post">Dashboard</a>
+                                <a style="border: 2px solid #1dc8cc" href="{{ route('home') }}" class="add-post">Dashboard</a>
                                 @endguest
                             </div>
                             <div class="responsive-search order-1">

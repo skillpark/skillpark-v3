@@ -17,19 +17,9 @@ class ClientController extends Controller
         return view('clients.home');
     }
 
-    public function dashboard()
+    public function freelanncer_profile()
     {
-        return view('userprofile.dashboard');
-    }
-
-    public function settings()
-    {
-        return view('userprofile.settings');
-    }
-
-    public function task()
-    {
-        return view('clients.task');
+        return view('clients.freelancer-profile');
     }
 
     /**
