@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\City;
 use Illuminate\Http\Request;
 
-class ProfileController extends Controller
+class PostController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,40 +16,12 @@ class ProfileController extends Controller
         //
     }
 
-    public function __construct()
-    {
-        $this->middleware('auth');
-        $this->middleware('verified');
+    public function postProject(){
+        return view('post.post-project');
     }
 
-    public function dashboard()
-    {
-        return view('userprofile.dashboard');
-    }
-
-    public function editProfile()
-    {
-        return view('userprofile.edit-profile');
-    }
-
-    public function task()
-    {
-        return view('services.task');
-    }
-
-    public function userDetails()
-    {
-        return view('clients.freelancer-profile');
-    }
-
-    public function serviceList()
-    {
-        return view('services.service-list');
-    }
-
-    public function serviceSingle()
-    {
-        return view('services.service-single');
+    public function postProposal(){
+        return view('post.post-proposal');
     }
 
     /**

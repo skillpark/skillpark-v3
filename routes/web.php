@@ -32,6 +32,9 @@ Route::middleware(['verified'])->group(function () {
     Route::get('/task', 'ProfileController@task');
     Route::get('/user-details', 'ProfileController@userDetails');
     Route::get('/services', 'ProfileController@serviceList');
+    Route::get('/services/description', 'ProfileController@serviceSingle');
+    Route::get('/post/project', 'PostController@postProject');
+    Route::get('/post/proposal', 'PostController@postProposal');
     
 
     Route::middleware(['verified','freelancer'])->group(function () {

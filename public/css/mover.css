@@ -1,3 +1,33 @@
+/*
+Template Name: Miver - LMS & Freelance Services Marketplace for Businesses HTML Template
+Author: Askbootstrap
+Author URI: https://themeforest.net/user/askbootstrap
+Version: 1.0
+*/
+
+/*
+-- Body
+-- Extra CSS
+-- Chat
+-- Network Item
+-- Filters
+-- Start Header CSS
+-- Start Home Page CSS
+-- Popular
+-- Services
+-- About
+-- Market Wrapper
+-- Freelance Projects
+-- Testimonials
+-- Pro Section
+-- Guide Wrapper
+-- Get Started
+-- Profile View CSS
+-- Web Design List
+-- Custom Checkbox
+-- Toggle Switch
+-- Responsive Design
+*/
 
 @import url('https://fonts.googleapis.com/css2?family=Muli:wght@200;300;400;500;600;700;800;900&display=swap');
 
@@ -21,7 +51,7 @@
      text-decoration: none;
 }
  a {
-     color: #1bb7bb;
+     color: #43619d;
 }
  * {
      margin: 0;
@@ -1070,7 +1100,7 @@
 }
 /* get started */
  .get-started {
-     background: url(../images/add/get-started.jpg) center top no-repeat;
+     background: url(../images/get-started.jpg) center top no-repeat;
      background-size: cover;
      text-align: center;
      padding: 60px 0;
@@ -1953,7 +1983,7 @@
      list-style: none;
 }
  footer div ul li:not(:last-child) {
-     padding-bottom: 5px;
+     padding-bottom: 16px;
 }
  footer div ul li a {
      color: #7a7d85;
@@ -2953,7 +2983,7 @@
     }
      .navbar-expand-lg .navbar-nav {
          -ms-flex-direction: row;
-         flex-direction: row !important;
+         flex-direction: row;
     }
      .navbar-nav .dropdown-menu {
          position: absolute;
