@@ -34,7 +34,7 @@
                     <div class="container">
                         <div class="row align-items-center">
                             <div class="pl-4 col-lg-5 col-md-5 pr-4">
-                                <img class="rounded img-fluid" src="/images/about.jpg" alt="Card image cap">
+                                <img class="rounded img-fluid" src="/images/add/about.jpg" alt="Card image cap">
                             </div>
                             <div class="col-lg-6 col-md-6 pl-5 pr-5">
                                 <h2 class="mb-5">The leading global marketplace for learning and instructions.

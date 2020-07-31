@@ -892,7 +892,7 @@ header {
     background: transparent;
     padding: 8px 20px;
     border-radius: 3px;
-    margin-left: 30px;
+    margin-left: 10px;
     text-align: center;
     text-transform: uppercase;
 }
@@ -7667,11 +7667,10 @@ span.right-cm {
     text-align: center;
     opacity: 0.99;
     bottom: 0px;
-    border-radius: 6px;
     background: #2f263c;
     color: #fff;
     padding: 15px 15px;
-    width: calc(99vw);
+    width: calc(100vw);
     z-index: 9999;
 }
 

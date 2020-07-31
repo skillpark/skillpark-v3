@@ -160,7 +160,7 @@
 								<div class="collapse navbar-collapse d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end bg-dark1 p-3 p-lg-0 mt1-5 mt-lg-0 mobileMenu" id="navbarSupportedContent">
                                     <ul class="navbar-nav align-self-stretch">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="{{ url('how-it-works') }}">About <span class="sr-only">(current)</span></a>
+                                            <a class="nav-link" href="{{ url('about') }}">About <span class="sr-only">(current)</span></a>
                                         </li>
                                         <li class="nav-item dropdown">
                                             <a class="nav-link" href="{{ url('/') }}">Enterprise</a>
@@ -189,10 +189,13 @@
                                             </div>
                                         </li>
                                     </ul>
-									<a href="#" class="search-link" role="button" data-toggle="modal" data-target="#searchModal"><i class="fas fa-search"></i></a>
-									<a href="{{ route('login') }}" class="add-post">Login</a>
-									<a href="{{ route('register') }}" class="add-task">Sign Up</a>									
-								</div>
+                                    @guest
+                                    <a href="{{ route('login') }}" class="add-post">Login</a>
+                                    <a href="{{ route('register') }}" class="add-task">Sign Up</a>		
+                                    @else
+                                    <a style="border: 2px solid #1dc8cc" href="{{ url('home') }}" class="add-post">Dashboard</a>	
+                                    @endguest				
+                                </div>               
 								<div class="responsive-search order-1">
 									<input type="text" class="rsp-search" placeholder="Search...">
 									<i class="fas fa-search r-sh1"></i>
@@ -387,7 +390,7 @@
         $("#header-scroll").hide();
         $("#header-search").hide();
         $(window).scroll(function() {
-            if ($(this).scrollTop() > 150) {
+            if ($(this).scrollTop() > 100) {
                 $('#header-scroll').slideDown(300);
                 $('#header-search').fadeIn(100);
             } else {

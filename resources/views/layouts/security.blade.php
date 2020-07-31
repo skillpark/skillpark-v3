@@ -10,7 +10,7 @@
     <title>Skillpark Inc. - Hire Expert Freelancers Any Time</title>
 
     <!-- Favicon Icon -->
-    <link rel="icon" type="image/png" href="/images/fav-miver.svg">
+    <link rel="icon" type="image/png" href="/images/logo/block-logo.svg">
 
     <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" href="/vendor/semantic/semantic.min.css">

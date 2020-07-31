@@ -20,55 +20,60 @@
 </style>
 <!-- Body Start -->
 <main class="body-section">
-    <!-- Begin Page Content -->
-    <section class="py-5 homepage-search-block position-relative" style="background-color: #f0f2f5;padding-top:8rem !important">
-        <div class="container">
-            <div class="row py-lg-5">
-                <div class="col-lg-6 mx-auto">
-                    <div class="homepage-search-title">
-                        <h1 class="mb-3 text-shadow text-gray-900 font-weight-bold" style="font-size: 2rem;">Where
-                            seeker meets the perfect and trusted freelancer talents</h1>
-                        <h5 class="mb-5 text-shadow text-gray-700 font-weight-normal">Hire expert freelancers for your
-                            projects any time.
-                        </h5>
-                    </div>
-                    <div class="homepage-search-form">
-                        <form class="form-noborder">
-                            <div class="form-row">
-                                <div class="col-lg-7 col-xl-9 col-sm-12 form-group">
-                                    <input type="text" placeholder="Find Services..." class="form-control border-0 form-control-lg shadow-sm">
-                                </div>
-                                <div class="col-lg-2 col-md-2 col-sm-12 form-group">
-                                    <button type="submit" class="btn btn-success btn-block btn-lg btn-gradient shadow-sm">Search</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="popular">
-                        <span class="text-body-2">Popular</span>
-                        <ul>
-                            <li><a href="#" class="text-body-2">Web App</a></li>
-                            <li><a href="#" class="text-body-2">Flutter Dev</a></li>
-                            <li><a href="#" class="text-body-2">Logo design</a></li>
-                            <li><a href="#" class="text-body-2">Articles &amp; Blog Posts</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-5">
-                    <img class="img-fluid" width="500" src="images/svg/banner.svg" alt='' />
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- social 
-			<ul class="trusted-by bg-white border-bottom">
-				<li><img style="width: 80px;filter: grayscale(100%);" src="images/logo-carousel-01.png"></li>
-				<li><img style="width: 80px;filter: grayscale(100%);" src="images/logo-carousel-02.png"></li>
-				<li><img style="width: 80px;filter: grayscale(100%);" src="images/logo-carousel-03.png"></li>
-				<li><img style="width: 80px;filter: grayscale(100%);" src="images/logo-carousel-04.png"></li>
-				<li><img style="width: 80px;filter: grayscale(100%);" src="images/logo-carousel-05.png"></li>
-			</ul>
-			<!--       social -->
+   <!-- Begin Page Content -->
+   <section style="padding-top: 8rem !important;background-color: #f0f2f5" class="py-5 homepage-search-block text-center homepage-search-block-2 position-relative">
+    <div class="container">
+       <div class="row py-lg-5">
+          <div class="col-lg-6 col-xl-6 mx-auto">
+             <div class="homepage-search-title text-xl-left">
+                <h1 style="font-size: 32px" class="mb-3 text-shadow text-gray-900 font-weight-bold">Where
+                    business meets the trusted freelancer talents</h1>
+                <h5 class="mb-5 text-shadow text-gray-800 font-weight-normal">Hire expert freelancers for your
+                    projects any time.
+                </h5>
+             </div>
+             <div class="homepage-search-form">
+                <form class="form-noborder">
+                   <div class="form-row">
+                      <div class="col-lg-3 col-md-3 col-sm-12 form-group">
+                         <div class="location-dropdown text-left">
+                            <i class="icofont-location-arrow"></i>
+                            <select class="custom-select form-control border-0 shadow-sm form-control-lg">
+                               <option> All </option>
+                               <option> Graphics & Design </option>
+                               <option> Digital Marketing </option>
+                               <option> Writing & Translation </option>
+                               <option> Video & Animation </option>
+                               <option> Music & Audio </option>
+                               <option> Programming & Tech </option>
+                               <option> Business </option>
+                               <option> Lifestyle </option>
+                               <option> Industries </option>
+                            </select>
+                         </div>
+                      </div>
+                      <div class="col-lg-7 col-md-7 col-sm-12 form-group">
+                         <input type="text" placeholder="Find Services..."
+                            class="form-control border-0 form-control-lg shadow-sm">
+                      </div>
+                      <div class="col-lg-2 col-md-2 col-sm-12 form-group">
+                         <button type="submit"
+                            class="btn btn-success btn-block btn-lg btn-gradient shadow-sm"><i
+                            class="fa fa-search"></i></button>
+                      </div>
+                   </div>
+                </form>
+             </div>
+             <h6 id="popular" class="mb-0 mt-1 text-shadow text-center text-gray-700 font-weight-normal">E.g. Voice over,
+                translation, logo design, Articles, Blog Posts &amp; more...
+             </h6>
+          </div>
+          <div class="col-lg-5 col-xl-5">
+            <img class="img-fluid" width="500" src="images/svg/banner.svg" alt='' />
+          </div>
+       </div>
+    </div>
+ </section>
 
     <div class="we-offers">
         <div class="container">

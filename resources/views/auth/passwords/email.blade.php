@@ -12,7 +12,7 @@
             <div class="col-lg-4 mx-auto">
                 <div class="osahan-login py-4" style="font-size: 13px !important;">
                     <div class="text-center mb-4">
-                        <a href="{{ route('login') }}"><img src="{{ asset('images/fav-miver.svg') }}" alt=""></a>
+                        <a href="{{ route('login') }}"><img src="{{ asset('images/logo/block-logo.svg') }}" alt=""></a>
                         <h5 class="font-weight-bold mt-3">First, let's find your account</h5>
                         <p class="text-muted">Please enter your email address</p>
 

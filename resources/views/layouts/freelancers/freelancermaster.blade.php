@@ -32,7 +32,7 @@
         style="padding: 7px !important;font-size:13px">
         <div class="container">
             <!-- Sidebar Toggle (Topbar) -->
-            <a class="navbar-brand" href="{{ route('home') }}"><img src="/images/logo.svg" alt=""></a>
+            <a class="navbar-brand" href="{{ route('home') }}"><img src="/images/logo/logo.svg" alt=""></a>
             <!-- Topbar Search -->
             <form class="d-none d-sm-inline-block form-inline mr-auto my-2 my-md-0 mw-200 navbar-search">
                 <div class="input-group" style="width: 300px;">
