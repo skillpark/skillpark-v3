@@ -31,6 +31,7 @@ Route::middleware(['verified'])->group(function () {
     Route::get('/settings', 'ProfileController@editProfile');
     Route::get('/task', 'ProfileController@task');
     Route::get('/user-details', 'ProfileController@userDetails');
+    Route::get('/services', 'ProfileController@serviceList');
     
 
     Route::middleware(['verified','freelancer'])->group(function () {

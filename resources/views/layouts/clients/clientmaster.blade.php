@@ -20,6 +20,7 @@
     <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/main.css">
     <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/mover.css" rel="stylesheet">
     <link href="/css/profileheader.css" rel="stylesheet">
     <link href="/vendor/OwlCarousel/assets/owl.carousel.css" rel="stylesheet">
     <link href="/vendor/OwlCarousel/assets/owl.theme.default.min.css" rel="stylesheet">
@@ -32,7 +33,7 @@
     <nav class="navbar navbar-expand-lg navbar-light topbar static-top shadow-sm bg-white osahan-nav-top px-0" style="padding: 7px !important;font-size:13px">
         <div class="container">
             <!-- Sidebar Toggle (Topbar) -->
-            <a class="navbar-brand" href=""><img src="/images/logo.svg" alt=""></a>
+            <a class="navbar-brand" href=""><img src="/images/logo/logo.svg" alt=""></a>
             <!-- Topbar Search -->
             <form class="d-none d-sm-inline-block form-inline mr-auto my-2 my-md-0 mw-200 navbar-search">
                 <div class="input-group" style="width: 300px;">
@@ -144,13 +145,13 @@
             </div>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="become-a-s">
+                    <a class="nav-link" href="seller">
                         <i class="fa fa-fw fa-trophy"></i>
                         <span>Become A Seller</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link">
-                        <img class="country-flag img-fluid" src="/images/en.svg">
+                        <img class="country-flag img-fluid" src="/images/svg/en.svg">
                         <span>English</span>
                     </a>
                 </li>

@@ -35,12 +35,17 @@ class ProfileController extends Controller
 
     public function task()
     {
-        return view('tasks.task');
+        return view('services.task');
     }
 
     public function userDetails()
     {
         return view('clients.freelancer-profile');
+    }
+
+    public function serviceList()
+    {
+        return view('services.service-list');
     }
 
     /**
