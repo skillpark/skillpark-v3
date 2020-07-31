@@ -2105,6 +2105,16 @@ span.right-cm {
     opacity:0.9;
 }
 
+.btn-success{
+    background-color: #1dc8cc !important;
+    border-color: #1dc8cc !important;
+}
+
+.btn-success:hover{
+    background-color: #1bb7bb !important;
+    border-color: #1bb7bb !important;
+}
+
 .footer {
     background: #ffffff;
     float: left;
