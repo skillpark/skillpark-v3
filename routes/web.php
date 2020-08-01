@@ -17,14 +17,15 @@ Route::get('/policy', function () {return view('about.terms');});
 
 Auth::routes(['verify' => true]);
 
-Route::middleware(['verified'])->group(function () {
+Route::middleware(['verified','auth'])->group(function () {
 
     Route::post('/home', 'UserController@store'); //stores default avatar
     
     Route::get('register/user-information', 'Auth\ProfileInfoController@showProfile');
     Route::post('register/user-information', 'Auth\ProfileInfoController@addProfile')->name('addprofile');
 
-    Route::get('/home', 'HomeController@index')->name('home'); //user feeds
+    Route::get('/home', 'HomeController@freelancer')->name('home'); //user feeds
+    Route::get('/client', 'HomeController@client')->name('client'); //client feeds
 
     //user-accounts routes
     Route::get('/dashboard', 'ProfileController@dashboard');

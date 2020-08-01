@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Skyline Ping Email</title>
+  <title>Skillpark Reset Email</title>
   <style type="text/css">
     @import url(http://fonts.googleapis.com/css?family=Lato:400);
 
@@ -112,7 +112,7 @@
 <table class="w320" width="500" cellspacing="0" cellpadding="0">
 <tbody>
 <tr>
-<td class="mobile-center" style="padding: 10px 0; text-align: center;" valign="top"><img src="https://skillpark.herokuapp.com/images/logo.svg" width="250" height="62" /></td>
+<td class="mobile-center" style="padding: 10px 0; text-align: center;" valign="top"><img src="https://skillpark.herokuapp.com/images/logo/logo.svg" width="250" height="62" /></td>
 </tr>
 </tbody>
 </table>
@@ -207,7 +207,7 @@
 <table style="margin: 0 auto;" width="100%" cellspacing="0" cellpadding="5">
 <tbody>
 <tr>
-<td style="text-align: center; margin: 0 auto;" width="100%"><a style="text-align: center;" href="#"> <img style="margin: 0 auto;" src="https://skillpark.herokuapp.com/images/logo.svg" alt="logo link" width="120" height="33" /> </a></td>
+<td style="text-align: center; margin: 0 auto;" width="100%"><a style="text-align: center;" href="#"> <img style="margin: 0 auto;" src="https://skillpark.herokuapp.com/images/logo/logo.svg" alt="logo link" width="120" height="33" /> </a></td>
 </tr>
 </tbody>
 </table>

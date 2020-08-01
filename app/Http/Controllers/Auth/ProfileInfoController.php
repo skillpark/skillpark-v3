@@ -27,16 +27,6 @@ class ProfileInfoController extends Controller
 
     public function addProfile(Request $request)
     {
-        // $user = \App\User::find(Auth::user()->id);
-        // $role_id = $request['role_id'];
-
-        // $user->roles()->detach();
-        // $user->roles()->attach($role_id);
-
-        // if (Auth::user()->usertype == 'client') {
-        //     return redirect()-> route('client');
-        // } else {
-        //     return redirect()-> route('freelancer');
-        // }
+        
     }
 }
