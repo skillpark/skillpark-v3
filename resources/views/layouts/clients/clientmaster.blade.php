@@ -80,11 +80,11 @@
                 <li class="nav-item dropdown no-arrow no-caret dropdown-user">
                     <a class="btn btn-icon btn-transparent-dark dropdown-toggle" id="navbarDropdownUserImage"
                         href="javascript:void(0);" role="button" data-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false"><img class="img-fluid" src="/{{ Auth::user()->avatar }}"></a>
+                        aria-expanded="false"><img class="img-fluid" src="{{ Auth::user()->avatar }}"></a>
                     <div class="dropdown-menu dropdown-menu-right border-0 shadow animated--fade-in-up"
                         aria-labelledby="navbarDropdownUserImage">
                         <h6 class="dropdown-header d-flex align-items-center">
-                            <img class="dropdown-user-img" src="/{{  Auth::user()->avatar }} ">
+                            <img class="dropdown-user-img" src="{{ Auth::user()->avatar }} ">
                             <div class=" dropdown-user-details">
                                 <div class="dropdown-user-details-name">{{ Auth::user()->name }}</div>
                                 <div class="dropdown-user-details-email">{{ Auth::user()->email }}</div>

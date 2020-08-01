@@ -112,7 +112,7 @@
                                             </div>
                                             @else
                                             <a href="#" class="account-link dropdown-toggle-no-caret" role="button" data-toggle="dropdown">
-                                                <div class="user-dp"><img src="/{{ Auth::user()->avatar }}" alt="{{ Auth::user()->name }}"></div>
+                                                <div class="user-dp"><img src="{{ Auth::user()->avatar }}" alt="{{ Auth::user()->name }}"></div>
                                                 <span>Hi! {{ Auth::user()->name }}</span>
                                                 <i class="fas fa-sort-down"></i>
                                             </a>

@@ -36,7 +36,7 @@ class LoginController extends Controller
 
     public function redirectTo(){
 
-        $user = Auth::user();
+        $user = \App\User::find(Auth::user()->id);
 
         if($user->hasRole('freelancer')){
             return route('home');

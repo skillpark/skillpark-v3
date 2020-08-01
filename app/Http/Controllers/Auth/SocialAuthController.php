@@ -2,14 +2,11 @@
 
 namespace App\Http\Controllers\Auth;
 
-use File;
 use App\User;
 use Exception;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
-use App\Providers\RouteServiceProvider;
 use Laravel\Socialite\Facades\Socialite;
-use Laravel\Socialite\SocialiteServiceProvider;
 
 class SocialAuthController extends Controller
 {
@@ -36,15 +33,16 @@ class SocialAuthController extends Controller
      *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
-    // protected function redirectTo()
-    // {
-    //     if (Auth::user()->usertype == 'freelancer') {
-    //         return view('freelancers.home');
-    //     } else {
-    //         return view('clients.home');
-    //     }
-    // }
+    public function show()
+    {
+        $user = \App\User::find(Auth::user()->id);
+    
+            if($user->hasRole('freelancer')){
+                return route('home');
+            }
+                return route('client');
+        
+    }
 
     /**
      * Redirect to provider for authentication
@@ -93,7 +91,12 @@ class SocialAuthController extends Controller
      */
     protected function sendSuccessResponse()
     {
-        return redirect()->intended('/register/user-information');
+        $user = \App\User::find(Auth::user()->id);
+    
+            if($user->hasRole('freelancer')){
+                return redirect()-> route('home');
+            }
+                return redirect()-> route('client');
     }
 
     /**
@@ -104,7 +107,7 @@ class SocialAuthController extends Controller
      */
     protected function sendFailedResponse($msg = null)
     {
-        return redirect()->route('login')
+        return redirect()->route('social.login')
             ->withErrors(['msg' => $msg ?: 'Unable to login, try with another provider to login.']);
     }
 

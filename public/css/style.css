@@ -501,6 +501,12 @@ input[type="password"]::-ms-input-placeholder {
     /* Microsoft Edge */
     color: #847577;
 }
+
+i.icon.delete:before{
+    font-family: "Font Awesome 5 Free" !important;
+    content: "\f057" !important;
+}
+
  .icon-form-control i {
      /* display: flex; */
      top: 0;
@@ -1615,8 +1621,8 @@ span.right-cm {
 }
 
 .job-price {
-    font-size: 18px;
-    color: #242424;
+    font-size: 14px;
+    color: #666;
     line-height: 1.2;
     text-align: center;
     margin-bottom: 6px;
@@ -1728,7 +1734,7 @@ span.right-cm {
 }
 
 .link-j1 {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 500;
     font-family: 'Muli', sans-serif;
     color: #242424;
@@ -1737,7 +1743,6 @@ span.right-cm {
     float: left;
     text-align: center;
     width: 100%;
-    text-transform: uppercase;
 }
 
 .link-j1:hover {
@@ -1917,9 +1922,9 @@ span.right-cm {
 }
 
 .job-urs-dts h4 {
-    font-size: 18px;
-    color: #242424;
-    font-weight: 500;
+    font-size: 16px;
+    color: #333;
+    font-weight: 700;
     line-height: 1.2;
     text-align: center;
     font-family: 'Muli', sans-serif;
@@ -2794,7 +2799,6 @@ span.right-cm {
 .main-tabs {
     float: left;
     width: 100%;
-    margin-top: 47px;
     position: relative;
 }
 
