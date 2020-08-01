@@ -44,6 +44,9 @@ Route::middleware(['verified','auth'])->group(function () {
     Route::middleware(['verified', 'client'])->group(function () {
     });
 
+    
+    Route::get('client', 'SearchController@searchInfo')->name('client');
+    Route::post('client', 'SearchController@searchAction')->name('searchInfo');
 
 });
 

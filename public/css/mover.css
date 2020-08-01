@@ -1,33 +1,4 @@
-/*
-Template Name: Miver - LMS & Freelance Services Marketplace for Businesses HTML Template
-Author: Askbootstrap
-Author URI: https://themeforest.net/user/askbootstrap
-Version: 1.0
-*/
 
-/*
--- Body
--- Extra CSS
--- Chat
--- Network Item
--- Filters
--- Start Header CSS
--- Start Home Page CSS
--- Popular
--- Services
--- About
--- Market Wrapper
--- Freelance Projects
--- Testimonials
--- Pro Section
--- Guide Wrapper
--- Get Started
--- Profile View CSS
--- Web Design List
--- Custom Checkbox
--- Toggle Switch
--- Responsive Design
-*/
 
 @import url('https://fonts.googleapis.com/css2?family=Muli:wght@200;300;400;500;600;700;800;900&display=swap');
 
@@ -2228,7 +2199,7 @@ Version: 1.0
      padding-left: 25px;
 }
  .seller-card .user-stats li::before {
-     font-family: FontAwesome;
+     font-family: "Font Awesome 5 Free";
      position: absolute;
      z-index: 1;
      left: 0;
@@ -2237,7 +2208,7 @@ Version: 1.0
      content: "\f007";
 }
  .seller-card .user-stats li.location::before {
-     content: "\f041";
+     content: "\f3c5";
      font-size: 15px;
      left: 1px;
 }

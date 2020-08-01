@@ -9,7 +9,7 @@
     <meta name="author" content="skillpark">
 
     <!-- Favicon Icon -->
-    <link rel="icon" type="image/png" href="/images/fav-miver.svg">
+    <link rel="icon" type="image/png" href="/images/logo/block-logo.svg">
 
     <!-- Stylesheets -->
     <!-- Semantic Css -->
@@ -190,7 +190,7 @@
                     </div>
                     <div class="col-lg-5 col-md-6">
                         <a class="order-1 order-lg-0 ml-lg-0 ml-3 mr-auto" style="float: right;margin-top:.5rem"
-                            href=""><img src="/images/logo.svg" alt=""></a>
+                            href=""><img src="/images/logo/logo.svg" alt=""></a>
 
                     </div>
                 </div>
@@ -200,7 +200,7 @@
             <div class="row">
                 <div class="col-lg-3 col-md-3">
                     <div class="about-jobby">
-                        <a href=""><img src="images/profilelogo.png" width="30" alt=""></a>
+                        <a href=""><img src="images/logo/profilelogo.png" width="30" alt=""></a>
                         <p>SKILLPARK INC. is a incorporated company which is legally acceptable nationwide. The
                             application is a Nepal National Payment Gateway Verified website. Trusted by the Government
                             of Nepal. &copy; Skillpark Inc.</p>
