@@ -65,7 +65,7 @@
                     </div>
                     <div class="form-group">
                         <label for="about_us" class="form-label">Tagline</label>
-                        <input type="text" name="tagline" id="about_us" placeholder="Title that best defines you.."
+                        <input type="text" name="tagline" id="about_us" value="{{ Auth::user()->tagline }}" placeholder="Title that best defines you.."
                             required />
                     </div>
                     <!--  <div class="form-radio">

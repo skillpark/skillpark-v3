@@ -66,4 +66,9 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return $this->belongsTo(City::class);
     }
+
+    public function categories()
+    {
+        return $this->belongsTo(Category::class);
+    }
 }

@@ -15,7 +15,7 @@ class Client extends Model
 
     public function candidates()
     {
-        return $this->belongsToMany(Candidate::class);
+        return $this->belongsToMany(Freelancer::class);
     }
 
 }

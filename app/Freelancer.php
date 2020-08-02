@@ -4,9 +4,14 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Candidate extends Model
+class Freelancer extends Model
 {
     protected $guarded = [];
+
+    public function skills()
+    {
+        return $this->belongsToMany(Skill::class);
+    }
 
     public function proposals()
     {

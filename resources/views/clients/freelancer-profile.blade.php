@@ -2,6 +2,10 @@
 
 @section('content')
 
+<script>
+   document.title = 'Profile - Random User';
+</script>
+
 <link href="/css/mover.css" rel="stylesheet">
 <div class="main-page second py-5">
    <div class="container">
@@ -305,7 +309,7 @@
                            </h4>
                            <div class="country d-flex align-items-center">
                               <span>
-                                 <img class="country-flag img-fluid" src="images/flag/india.png">
+                                 <img class="country-flag img-fluid" src="/images/svg/en.svg">
                               </span>
                               <div class="country-name font-accent">India</div>
                            </div>
@@ -340,9 +344,9 @@
                            </h4>
                            <div class="country d-flex align-items-center">
                               <span>
-                                 <img class="country-flag img-fluid" src="images/flag/flag.png">
+                                 <img class="country-flag img-fluid" src="/images/svg/en.svg">
                               </span>
-                              <div class="country-name font-accent">Germany</div>
+                              <div class="country-name font-accent">Pokhara</div>
                            </div>
                            <div class="review-description">
                               <p>
@@ -375,9 +379,9 @@
                            </h4>
                            <div class="country d-flex align-items-center">
                               <span>
-                                 <img class="country-flag img-fluid" src="images/flag/uk.png">
+                                 <img class="country-flag img-fluid" src="/images/svg/en.svg">
                               </span>
-                              <div class="country-name font-accent">UK</div>
+                              <div class="country-name font-accent">Kathmadnu</div>
                            </div>
                            <div class="review-description">
                               <p>
@@ -410,9 +414,9 @@
                            </h4>
                            <div class="country d-flex align-items-center">
                               <span>
-                                 <img class="country-flag img-fluid" src="images/flag/australia.png">
+                                 <img class="country-flag img-fluid" src="/images/svg/en.svg">
                               </span>
-                              <div class="country-name font-accent">Australia</div>
+                              <div class="country-name font-accent">Dhangadhi</div>
                            </div>
                            <div class="review-description">
                               <p>
